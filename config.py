@@ -1,4 +1,6 @@
 from collections import deque
+import tensorflow as tf
+from im_transf_net import create_net
 
 
 # argument settings
@@ -46,4 +48,35 @@ args_display = {
     "drawing_color": (0, 255, 255),
     "is_start": 1,
     "thick_coeff": 2.5,
+}
+
+# arguments for style transfer
+args_styleTransfer = {
+    'model_path': './models/starry_final.ckpt',
+    'upsample_method': 'resize',
+    'content_target_resize': (1, 210, 280, 3),
+}
+
+# add sess
+sess = tf.Session()
+args_styleTransfer["sess"] = sess
+
+# add X, Y
+with tf.variable_scope('img_t_net'):
+    args_styleTransfer["X"] = tf.placeholder(
+        tf.float32,
+        shape=args_styleTransfer["content_target_resize"],
+        name='input'
+    )
+    args_styleTransfer["Y"] = create_net(
+        args_styleTransfer["X"],
+        args_styleTransfer['upsample_method']
+    )
+# add model_saver
+model_saver = tf.train.Saver()
+model_saver.restore(args_styleTransfer["sess"], args_styleTransfer['model_path'])
+
+# arguments for gaming
+args_gaming = {
+    "None": None,
 }
