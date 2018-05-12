@@ -1,5 +1,6 @@
 import cv2
 import numpy as np
+import time
 import menu_top
 import video_mode
 import ball_tracking
@@ -19,6 +20,7 @@ frame_fg = np.zeros((hei_frame, wid_frame, 3), dtype=np.uint8)  # front frame
 
 # Video flow
 while cap.isOpened():
+    iteration_start = time.time()
     ret, frame_bg = cap.read()
     cv2.flip(frame_bg, 1, frame_bg)
 
@@ -29,6 +31,7 @@ while cap.isOpened():
     mask_fg = frame_fg > 0
 
     if MODE == 'display':
+        print(frame_bg.shape, mask_fg.shape)
         # Attachment of menu on the top of frame_bg
         frame_bg_with_menu = menu_top.attach_menu(
             frame_bg.copy(), args_menu["menu_dict"], args_menu["icon_len_side"]
@@ -38,6 +41,7 @@ while cap.isOpened():
             np.multiply(frame_bg_with_menu, ~mask_fg)
         )
     else:
+        print(frame_bg.shape, mask_fg.shape)
         frame = np.add(
             np.multiply(frame_fg, mask_fg),
             np.multiply(
@@ -49,8 +53,10 @@ while cap.isOpened():
                 ~mask_fg
             )
         )
-
-    cv2.imshow('Amuse_park', cv2.resize(frame, (800, 600)))
+    fps = str(round(1 / (time.time() - iteration_start), 2))
+    frame = cv2.resize(frame, (800, 600))
+    cv2.putText(frame, 'FPS: '+fps, (10, 50), cv2.FONT_HERSHEY_COMPLEX, 2, (0, 255, 255), 3)
+    cv2.imshow('Amuse_park', frame)
 
     # key pressed
     key = cv2.waitKey(10) & 0xFF

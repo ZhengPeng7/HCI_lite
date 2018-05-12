@@ -1,5 +1,7 @@
 from collections import deque
 import tensorflow as tf
+import numpy as np
+import cv2
 from im_transf_net import create_net
 
 
@@ -7,7 +9,7 @@ from im_transf_net import create_net
 args = {
     "video_source": 0,
     "deque_buffer": 32,
-    "green_lower": (3, 103, 198),#(29, 86, 6),  # color range of ball in the HSV color space
+    "green_lower": (3, 103, 178),#(29, 86, 6),  # color range of ball in the HSV color space
     "green_upper": (234, 255, 255),#(64, 255, 255),
 }
 
@@ -34,7 +36,7 @@ args_menu = {
 # "gaming": Join in a shabby Arkanoid,
 # "calc": 
 # }
-MODE = "display"
+MODE = "styleTransfer"
 
 # arguments for tracking
 pts = deque(maxlen=args["deque_buffer"])
@@ -55,7 +57,19 @@ args_styleTransfer = {
     'model_path': './models/starry_final.ckpt',
     'upsample_method': 'resize',
     'content_target_resize': (1, 210, 280, 3),
+    'skin_lower': (0, 28, 60),
+    'skin_upper': (50, 255, 255),
 }
+
+# add rgb and bgr differences
+# args_styleTransfer["mask_rgb"] = cv2.cvtColor(
+#     cv2.flip(
+#         np.tri(*args_styleTransfer["content_target_resize"][1:3]),
+#     1).astype(np.uint8),
+#     cv2.COLOR_GRAY2BGR
+# ) > 0
+args_styleTransfer["mask_rgb"] = np.ones(args_styleTransfer["content_target_resize"][1:], dtype=np.bool)
+args_styleTransfer["mask_rgb"][:, :args_styleTransfer["mask_rgb"].shape[1]//2, :] = 0
 
 # add sess
 sess = tf.Session()
