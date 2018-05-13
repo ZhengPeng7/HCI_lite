@@ -2,14 +2,15 @@ import cv2
 import numpy as np
 import ball_tracking
 import style_transfer
+import formula_calc
 
 
 def video_mode(frame_bg, frame_fg, mode, args):
     """
     Description: Do some operations on frame.
     Params:
-        frame_fg: Paintings layer.
         frame_bg: Input from web camera.
+        frame_fg: Paintings layer.
         mode: Choose one way to change the frame.
     """
     if mode == 'display':
@@ -22,21 +23,17 @@ def video_mode(frame_bg, frame_fg, mode, args):
 
 def mode_display(frame_bg, frame_fg, args_display, mode):
     """
-    Description: In display mode. Main function is the effect of tailing.
+    Description: In display mode. Main function is to show the effect of tailing.
     Params:
-        frame_fg: The canvas layer.
         frame_bg: The background layer.
+        frame_fg: The canvas layer.
         args_display: The arguments used in display mode.
+        mode: Current mode, coz display mode can turn into other modes.
     """
-    (frame_fg, args_display) = ball_tracking.ball_tracking(
+    frame_fg, args_display, mode = ball_tracking.ball_tracking(
         frame_bg, np.zeros_like(frame_fg), args_display, mode
     )
     return frame_bg, frame_fg, mode
-
-
-# def mode_writing(frame_bg, frame_fg, args_writing):
-
-#     return frame_bg, frame_fg
 
 
 # def mode_gaming(frame_bg, frame_fg, args_gaming):
@@ -44,10 +41,27 @@ def mode_display(frame_bg, frame_fg, args_display, mode):
 
 
 def mode_calc(frame_bg, frame_fg, args_calc):
+    """
+    Description: In calc mode. Main function is to calculate the hand written formula.
+    Params:
+        frame_bg: The background layer.
+        frame_fg: The canvas layer.
+        args_calc: The arguments used in args_calc mode.
+    """
+    frame_bg, frame_fg = formula_calc.formula_calc(frame_bg, frame_fg, args_calc)
+    # cv2.imshow('fg', frame_fg)
     return frame_bg, frame_fg
 
 
 def mode_styleTransfer(frame_bg, frame_fg, args_styleTransfer):
+    """
+    Description: In styleTransfer mode, it transfers the style of input into
+                 the style of Starry Night by Vincent Willem van Gogh.
+    Params:
+        frame_bg: The background layer.
+        frame_fg: The canvas layer.
+        args_styleTransfer: The arguments used in styleTransfer mode.
+    """
     frame_bg = style_transfer.style_transfer(
         frame_bg, args_styleTransfer
     )

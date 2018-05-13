@@ -5,12 +5,21 @@ import cv2
 from im_transf_net import create_net
 
 
+# video mode setting: {
+# "display": Default value, of which ink would fade, with tracking effect,
+# "writing": Ink would not fade,
+# "gaming": Join in a shabby Arkanoid,
+# "calc": Do math evaluation from handwritten formula by OCR tech.
+#       "evaluation": evaluate the result of handwritten formula.
+# }
+MODE = "calc"
+
 # argument settings
 args = {
     "video_source": 0,
     "deque_buffer": 32,
-    "green_lower": (3, 103, 178),#(29, 86, 6),  # color range of ball in the HSV color space
-    "green_upper": (234, 255, 255),#(64, 255, 255),
+    "orange_lower": (29, 86, 6),#(3, 103, 178),  # color range of ball in the HSV color space
+    "orange_upper": (64, 255, 255),#(234, 255, 255),
 }
 
 # menu_top settings
@@ -23,20 +32,11 @@ args_menu = {
         "color_purple": (161, 0, 161),
         "plus_icon": "images/plus_icon.png",
         "minus_icon": "images/minus_icon.png",
-        "color_redaa": (0, 0, 0),
-        "color_purpleaa": (255, 255, 255),
+        "color_redaa": "images/theStarryNight.jpg",
+        "color_purpleaa": "images/calculator.jpg",
     },
     "icon_len_side": 80,
 }
-
-
-# video mode setting: {
-# "display": Default value, of which ink would fade, with tracking effect,
-# "writing": Ink would not fade,
-# "gaming": Join in a shabby Arkanoid,
-# "calc": 
-# }
-MODE = "styleTransfer"
 
 # arguments for tracking
 pts = deque(maxlen=args["deque_buffer"])
@@ -56,12 +56,14 @@ args_display = {
 args_styleTransfer = {
     'model_path': './models/starry_final.ckpt',
     'upsample_method': 'resize',
-    'content_target_resize': (1, 210, 280, 3),
+    'content_target_resize': (1, 240, 320, 3),
     'skin_lower': (0, 28, 60),
     'skin_upper': (50, 255, 255),
     'fgbg': cv2.bgsegm.createBackgroundSubtractorLSBP(),
     'kernel_open': cv2.getStructuringElement(cv2.MORPH_ELLIPSE,(3,3)),
-    'show_detail': True,
+    'show_detail': False,
+    'waiting_sec': 5,
+    'whole_scene': True,
 }
 
 # add rgb and bgr differences
@@ -87,7 +89,16 @@ with tf.variable_scope('img_t_net'):
 model_saver = tf.train.Saver()
 model_saver.restore(args_styleTransfer["sess"], args_styleTransfer['model_path'])
 
-# arguments for gaming
-args_gaming = {
-    "None": None,
+# arguments for calc
+args_calc = {
+    'font_color': (151, 0, 64),
+    'font_thickness': 3,
+    'font_style': cv2.FONT_HERSHEY_SIMPLEX,
+    "orange_lower": (29, 86, 6),        # (3, 103, 178),
+    "orange_upper": (64, 255, 255),     # (234, 255, 255),
+    'pts': args_display['pts'].copy(),
+    'thick_coeff': 2.5,
+    'deque_buffer': 32,
+    'res': '',    # 10,
+    'kernel_open': cv2.getStructuringElement(cv2.MORPH_ELLIPSE,(3,3)),
 }

@@ -25,24 +25,27 @@ def style_transfer(frame_bg, args_styleTransfer):
         np.multiply(frame_bg_stylized_BGR, ~args_styleTransfer["mask_rgb"]),
         np.multiply(frame_bg_stylized_RGB, args_styleTransfer["mask_rgb"])
     )
-    mask_clothes = clothes_extraction(frame_bg, args_styleTransfer) > 0
-    mask_clothes = cv2.cvtColor(
-        cv2.resize(mask_clothes.astype(np.uint8)*255, args_styleTransfer["content_target_resize"][2:0:-1]),
-        cv2.COLOR_GRAY2BGR
-    ) > 0
-    if args_styleTransfer["show_detail"]:
-        cv2.imshow('mask_clothes', mask_clothes.astype(np.uint8)*255)
-    frame_bg = np.add(
-        np.multiply(frame_bg_stylized, mask_clothes),
-        np.multiply(
-            cv2.resize(
-                frame_bg,
-                args_styleTransfer["content_target_resize"][2:0:-1],
-                cv2.INTER_CUBIC
-            ),
-            ~mask_clothes
+    if args_styleTransfer["whole_scene"]:
+        frame_bg = frame_bg_stylized
+    else:
+        mask_clothes = clothes_extraction(frame_bg, args_styleTransfer) > 0
+        mask_clothes = cv2.cvtColor(
+            cv2.resize(mask_clothes.astype(np.uint8)*255, args_styleTransfer["content_target_resize"][2:0:-1]),
+            cv2.COLOR_GRAY2BGR
+        ) > 0
+        if args_styleTransfer["show_detail"]:
+            cv2.imshow('mask_clothes', mask_clothes.astype(np.uint8)*255)
+        frame_bg = np.add(
+            np.multiply(frame_bg_stylized, mask_clothes),
+            np.multiply(
+                cv2.resize(
+                    frame_bg,
+                    args_styleTransfer["content_target_resize"][2:0:-1],
+                    cv2.INTER_CUBIC
+                ),
+                ~mask_clothes
+            )
         )
-    )
 
 
     return frame_bg

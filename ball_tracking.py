@@ -17,7 +17,7 @@ def ball_tracking(frame_bg_without_menu, frame_fg, args_display, MODE):
     (dX, dY) = args_display["dXY"]
     blurred = cv2.GaussianBlur(frame_bg_without_menu, (11, 11), 0)
     hsv = cv2.cvtColor(frame_bg_without_menu, cv2.COLOR_BGR2HSV)
-    mask_color = cv2.inRange(hsv, args["green_lower"], args["green_upper"])
+    mask_color = cv2.inRange(hsv, args["orange_lower"], args["orange_upper"])
     mask_color = cv2.erode(mask_color, None, iterations=2)
     mask_color = cv2.dilate(mask_color, None, iterations=2)
     cnts = cv2.findContours(
