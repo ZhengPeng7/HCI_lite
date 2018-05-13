@@ -12,12 +12,15 @@ def video_mode(frame_bg, frame_fg, mode, args):
         frame_bg: Input from web camera.
         mode: Choose one way to change the frame.
     """
-    frame_bg, frame_fg = eval('mode_' + mode)(frame_bg, frame_fg, args)
+    if mode == 'display':
+        frame_bg, frame_fg, mode = eval('mode_' + mode)(frame_bg, frame_fg, args, mode)
+    else:
+        frame_bg, frame_fg = eval('mode_' + mode)(frame_bg, frame_fg, args)
 
-    return frame_bg, frame_fg
+    return frame_bg, frame_fg, mode
 
 
-def mode_display(frame_bg, frame_fg, args_display):
+def mode_display(frame_bg, frame_fg, args_display, mode):
     """
     Description: In display mode. Main function is the effect of tailing.
     Params:
@@ -26,18 +29,18 @@ def mode_display(frame_bg, frame_fg, args_display):
         args_display: The arguments used in display mode.
     """
     (frame_fg, args_display) = ball_tracking.ball_tracking(
-        frame_bg, np.zeros_like(frame_fg), args_display
+        frame_bg, np.zeros_like(frame_fg), args_display, mode
     )
-    return frame_bg, frame_fg
+    return frame_bg, frame_fg, mode
 
 
-def mode_writing(frame_bg, frame_fg, args_writing):
+# def mode_writing(frame_bg, frame_fg, args_writing):
 
-    return frame_bg, frame_fg
+#     return frame_bg, frame_fg
 
 
-def mode_gaming(frame_bg, frame_fg, args_gaming):
-    return frame_bg, frame_fg
+# def mode_gaming(frame_bg, frame_fg, args_gaming):
+#     return frame_bg, frame_fg
 
 
 def mode_calc(frame_bg, frame_fg, args_calc):

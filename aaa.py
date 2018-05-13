@@ -4,9 +4,7 @@ import cv2
 cap = cv2.VideoCapture(0)
 
 kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE,(3,3))
-fgbg = cv2.bgsegm.createBackgroundSubtractorGSOC(
-    
-)
+fgbg = cv2.bgsegm.createBackgroundSubtractorLSBP()
 
 while(1):
     ret, frame = cap.read()

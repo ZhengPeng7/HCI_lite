@@ -59,15 +59,12 @@ args_styleTransfer = {
     'content_target_resize': (1, 210, 280, 3),
     'skin_lower': (0, 28, 60),
     'skin_upper': (50, 255, 255),
+    'fgbg': cv2.bgsegm.createBackgroundSubtractorLSBP(),
+    'kernel_open': cv2.getStructuringElement(cv2.MORPH_ELLIPSE,(3,3)),
+    'show_detail': True,
 }
 
 # add rgb and bgr differences
-# args_styleTransfer["mask_rgb"] = cv2.cvtColor(
-#     cv2.flip(
-#         np.tri(*args_styleTransfer["content_target_resize"][1:3]),
-#     1).astype(np.uint8),
-#     cv2.COLOR_GRAY2BGR
-# ) > 0
 args_styleTransfer["mask_rgb"] = np.ones(args_styleTransfer["content_target_resize"][1:], dtype=np.bool)
 args_styleTransfer["mask_rgb"][:, :args_styleTransfer["mask_rgb"].shape[1]//2, :] = 0
 

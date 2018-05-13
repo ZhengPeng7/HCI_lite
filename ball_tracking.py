@@ -3,7 +3,7 @@ import numpy as np
 from config import args, args_menu
 
 
-def ball_tracking(frame_bg_without_menu, frame_fg, args_display):
+def ball_tracking(frame_bg_without_menu, frame_fg, args_display, MODE):
     """
     Description: To describe the scene in the tracking mode. Since in the
                  tracking mode,there is no other operations besides tracking
@@ -45,6 +45,12 @@ def ball_tracking(frame_bg_without_menu, frame_fg, args_display):
                     args_display["thick_coeff"] = min(17.0, args_display["thick_coeff"] * 1.03)
                 elif center[0] < args_menu["icon_len_side"] * 6:
                     args_display["thick_coeff"] = max(1.7, args_display["thick_coeff"] / 1.03)
+                elif center[0] < args_menu["icon_len_side"] * 7:
+                    MODE = 'styleTransfer'
+                    return frame_fg, args_display, MODE
+                elif center[0] < args_menu["icon_len_side"] * 8:
+                    MODE = 'calc'
+                    return frame_fg, args_display, MODE
                 else:
                     pass
             cv2.circle(frame_fg, (int(x), int(y)), int(radius),
@@ -74,4 +80,4 @@ def ball_tracking(frame_bg_without_menu, frame_fg, args_display):
         (10, frame_fg.shape[0] - 10), cv2.FONT_HERSHEY_SIMPLEX,
         0.35, args_display["drawing_color"], 1)
 
-    return frame_fg, args_display
+    return frame_fg, args_display, MODE
