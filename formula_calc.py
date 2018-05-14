@@ -75,7 +75,7 @@ def formula_calc(frame_bg, frame_fg, args_calc):
 def evaluation(frame_fg, args_calc):
     formula = cv2.threshold(
         cv2.cvtColor(frame_fg, cv2.COLOR_BGR2GRAY),
-        1, 255, cv2.THRESH_BINARY
+        1, 255, cv2.THRESH_BINARY_INV
     )[1]
     formula = cv2.morphologyEx(
         formula,
