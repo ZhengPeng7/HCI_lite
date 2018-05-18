@@ -3,7 +3,7 @@ import numpy as np
 import ball_tracking
 import style_transfer
 import formula_calc
-
+import wear_glasses
 
 def video_mode(frame_bg, frame_fg, mode, args):
     """
@@ -66,4 +66,11 @@ def mode_styleTransfer(frame_bg, frame_fg, args_styleTransfer):
         frame_bg, args_styleTransfer
     )
     
+    return frame_bg, frame_fg
+
+
+def mode_glass(frame_bg, frame_fg, args_glass):
+    frame_bg = wear_glasses.wear_glasses(
+        frame_bg, args_glass
+    )
     return frame_bg, frame_fg

@@ -6,7 +6,8 @@ import menu_top
 import video_mode
 import ball_tracking
 import formula_calc
-from config import args, args_menu, MODE, args_display, args_styleTransfer, args_calc
+from config import (args, args_menu, MODE,
+                    args_display, args_styleTransfer, args_calc, args_glass)
 
 
 # scene settings
@@ -115,6 +116,8 @@ while cap.isOpened():
         MODE = "styleTransfer"
     elif key == ord("e"):
         args_calc["res"] = formula_calc.evaluation(frame_fg, args_calc)
+    elif key == ord("g"):
+        MODE = "glass"
     else:
         pass
 

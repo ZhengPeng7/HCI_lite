@@ -11,8 +11,9 @@ from im_transf_net import create_net
 # "gaming": Join in a shabby Arkanoid,
 # "calc": Do math evaluation from handwritten formula by OCR tech.
 #       "evaluation": evaluate the result of handwritten formula.
+# "glass": Help you wear a pair of glasses.
 # }
-MODE = "calc"
+MODE = "glass"
 
 # argument settings
 args = {
@@ -101,4 +102,10 @@ args_calc = {
     'deque_buffer': 32,
     'res': '',    # 10,
     'kernel_open': cv2.getStructuringElement(cv2.MORPH_ELLIPSE,(3,3)),
+}
+
+# arguments for wearing glasses
+args_glass = {
+    'eye_cascade': cv2.CascadeClassifier('./models/haarcascade_eye.xml'),
+    'glass_img': cv2.imread('./images/glass_image.jpg'),
 }
