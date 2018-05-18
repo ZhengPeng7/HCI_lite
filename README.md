@@ -66,4 +66,4 @@ video mode setting: {
 
 - ### Glass mode:
 
-  ![glass_modE](/home/a/work_space/HCI_lite/images/glass_modE.gif)
+  ![glass_modE](./images/glass_modE.gif)
