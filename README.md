@@ -4,15 +4,15 @@
 >
 > Duration: 
 >
-> |                           Progress                           |               Time                |
-> | :----------------------------------------------------------: | :-------------------------------: |
-> | Building basic video flow frame skeleton, including controller tracking, controller tailing... |  $5/9/2018 \rightarrow 5/9/2018$  |
-> |                     Appending top menu.                      | $5/10/2018 \rightarrow 5/10/2018$ |
-> |        Inserting real time image_style_transfer mode.        | $5/10/2018 \rightarrow 5/11/2018$ |
-> |  Implementing clothes region extraction for styleTransfer.   | $5/11/2018 \rightarrow 5/12/2018$ |
-> | Implementing formula evaluation: integerate my own dataset for training Lenet to do single character recognition, split the handwritten expression, then evaluate it. | $5/13/2018 \rightarrow 5/14/2018$ |
-> |              Finishing sunglasses wearing mode.              | $5/14/2018 \rightarrow 5/15/2018$ |
-> |      Refining my documents and improving the stability.      |     $5/13/2018\rightarrow...$     |
+> |                           Progress                           |           Time           |
+> | :----------------------------------------------------------: | :----------------------: |
+> | Building basic video flow frame skeleton, including controller tracking, controller tailing... |  5/9/2018 --> 5/9/2018   |
+> |                     Appending top menu.                      | 5/10/2018 --> 5/10/2018  |
+> |        Inserting real time image_style_transfer mode.        | 5/10/2018 --> 5/11/2018  |
+> |  Implementing clothes region extraction for styleTransfer.   | 5/11/2018 --> 5/12/2018  |
+> | Implementing formula evaluation: integerate my own dataset for training Lenet to do single character recognition, split the handwritten expression, then evaluate it. | 5/13/2018 --> 5/14/2018  |
+> |              Finishing sunglasses wearing mode.              | 5/14/2018 --> 5/15/2018$ |
+> |      Refining my documents and improving the stability.      |    5/13/2018 --> ...     |
 
 
 
