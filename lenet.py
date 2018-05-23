@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 from collections import OrderedDict
 import os
 import sys
+import math
 
 
 def lenet(epoch_train):
@@ -186,12 +187,16 @@ def lenet(epoch_train):
 
 def plot_acc(acc_train_train, acc_train_test, acc_test):
     plt.figure(1)
+    for i in range(1, len(acc_train_test)-1):
+        if math.isinf(acc_train_test[i]):
+            acc_train_test[i] = (acc_train_test[i-1] + acc_train_test[i+1]) / 2
     p1, p2 = plt.plot(list(range(len(acc_train_train))),
                       acc_train_train, 'r-',
                       list(range(len(acc_train_test))),
                       acc_train_test, 'b-')
     plt.legend(handles=[p1, p2], labels=["training_acc", "testing_acc"])
     plt.title("Accuracies During Training")
+    plt.savefig('./results/lenet_training.jpg')
     plt.show()
 
 

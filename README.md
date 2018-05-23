@@ -13,6 +13,7 @@
 > | Implementing formula evaluation: integerate my own dataset for training Lenet to do single character recognition, split the handwritten expression, then evaluate it. | 5/13/2018  | 5/14/2018 |
 > |              Finishing sunglasses wearing mode.              | 5/14/2018  | 5/15/2018 |
 > |      Refining my documents and improving the stability.      | 5/13/2018  |    ...    |
+> |                    __Development SumUp__                     | 5/10/2018  | 5/15/2018 |
 
 
 
@@ -48,6 +49,8 @@ video mode setting: {
 
 - ### Display mode:
 
+  __Algorithms__: No one deserves mention.
+
   Drawing in the air.
 
 - ### StyleTransfer mode:
@@ -56,9 +59,16 @@ video mode setting: {
 
 1. Whole input is stylized except my body:
 
+   __Algorithms:__ Skin Detection + Basic Morphology operations, etc.
+
    ![Background_and_clothes_stylized](./images/Background_and_clothes_stylized.png)
 
 2. Only clothes stylized(Gif, ahh):
+
+   __Algorithms:__ 
+
+    	1. Background Substraction (LSBP) / Grab Cut.
+    	2. Skin Detection
 
    ![Only_clothes_stylized](./images/Stylization.gif)
 
@@ -80,4 +90,10 @@ video mode setting: {
 
 - ### Glass mode:
 
+  __Algorithms:__ [Haarcascade](https://docs.opencv.org/trunk/d7/d8b/tutorial_py_face_detection.html) for eye detection.
+
   ![glass_modE](./images/glass_modE.gif)
+
+- ### AR for Time Tower
+
+  __Algorithms:__ [3d_calibration](https://docs.opencv.org/2.4/modules/calib3d/doc/camera_calibration_and_3d_reconstruction.html#solvepnp).

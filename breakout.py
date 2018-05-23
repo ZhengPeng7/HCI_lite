@@ -1,5 +1,6 @@
 import math
 import pygame
+import numpy as np
 
 # Define some colors
 black = (0, 0, 0)
@@ -46,11 +47,11 @@ class Ball(pygame.sprite.Sprite):
     speed = 10.0
 
     # Floating point representation of where the ball is
-    x = 0.0
-    y = 180.0
+    x = float(np.random.randint(0, 10, (1), dtype=int))
+    y = int(np.random.randint(160, 180, (1), dtype=int))
 
     # Direction of ball (in degrees)
-    direction = 200
+    direction = int(np.random.randint(100, 200, (1), dtype=int))
 
     width = 10
     height = 10
@@ -175,10 +176,13 @@ allsprites = pygame.sprite.Group()
 player = Player()
 allsprites.add(player)
 
-# Create the ball
-ball = Ball()
-allsprites.add(ball)
-balls.add(ball)
+# Create the ball_1
+ball_1 = Ball()
+allsprites.add(ball_1)
+balls.add(ball_1)
+ball_2 = Ball()
+allsprites.add(ball_2)
+balls.add(ball_2)
 
 # The top of the block (y position)
 top = 80
@@ -227,7 +231,7 @@ while not exit_program:
     if not game_over:
         # Update the player and ball positions
         player.update()
-        game_over = ball.update()
+        game_over = ball_1.update() and ball_2.update()
 
     # If we are done, print game over
     if game_over:
@@ -240,19 +244,24 @@ while not exit_program:
     if pygame.sprite.spritecollide(player, balls, False):
         # The 'diff' lets you try to bounce the ball left or right
         # depending where on the paddle you hit it
-        diff = (player.rect.x + player.width/2) - (ball.rect.x+ball.width/2)
+        diff = (player.rect.x + player.width/2) - (ball_1.rect.x+ball_1.width/2)
+        diff = (player.rect.x + player.width/2) - (ball_2.rect.x+ball_2.width/2)
 
         # Set the ball's y position in case
         # we hit the ball on the edge of the paddle
-        ball.rect.y = screen.get_height() - player.rect.height - ball.rect.height - 1
-        ball.bounce(diff)
+        ball_1.rect.y = screen.get_height() - player.rect.height - ball_1.rect.height - 1
+        ball_1.bounce(diff)
+        ball_2.rect.y = screen.get_height() - player.rect.height - ball_2.rect.height - 1
+        ball_2.bounce(diff)
 
     # Check for collisions between the ball and the blocks
-    deadblocks = pygame.sprite.spritecollide(ball, blocks, True)
+    deadblocks = pygame.sprite.spritecollide(ball_1, blocks, True)
+    deadblocks = pygame.sprite.spritecollide(ball_2, blocks, True)
 
     # If we actually hit a block, bounce the ball
     if len(deadblocks) > 0:
-        ball.bounce(0)
+        ball_1.bounce(0)
+        ball_2.bounce(0)
 
         # Game ends if all the blocks are gone
         if len(blocks) == 0:
