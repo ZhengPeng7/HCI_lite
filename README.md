@@ -80,7 +80,7 @@ video mode setting: {
 
   1. The well-trained Lenet:
 
-     ![Lenet](./images/lenet_training.png)
+     ![Lenet](./images/lenet_training.jpg)
 
   2. Then I just split the formula horizontally, just like what I did in the [VehicleLicensePlateRecognition](https://github.com/ZhengPeng7/Vehicle_License_Plate_Recognition).
 
