@@ -64,11 +64,12 @@ def formula_calc(frame_bg, frame_fg, args_calc):
 
     cv2.putText(
         frame_bg,
-        'Press "c" to calculate the formula.',
+        'Press "e" to evaluate the formula.',
         (20, 150),
         cv2.FONT_HERSHEY_COMPLEX,
         1, (0, 0, 255), 3
     )
+    frame_fg[:33, :33] = 0
     return frame_bg, frame_fg
 
 

@@ -13,7 +13,7 @@ from im_transf_net import create_net
 #       "evaluation": evaluate the result of handwritten formula.
 # "glass": Help you wear a pair of glasses.
 # }
-MODE = "glass"
+MODE = "styleTransfer"
 
 # argument settings
 args = {
@@ -63,8 +63,8 @@ args_styleTransfer = {
     'fgbg': cv2.bgsegm.createBackgroundSubtractorLSBP(),
     'kernel_open': cv2.getStructuringElement(cv2.MORPH_ELLIPSE,(3,3)),
     'show_detail': False,
-    'waiting_sec': 5,
-    'whole_scene': True,
+    'waiting_sec': 2,
+    'whole_scene': False,
 }
 
 # add rgb and bgr differences

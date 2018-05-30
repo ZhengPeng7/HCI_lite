@@ -71,7 +71,7 @@ def predict_formula(characs):
     pred_class_index = tf.argmax(y_conv, 1)
     # restore well-trained model
     saver = tf.train.Saver()
-    saver.restore(sess, './my_model/model.ckpt')
+    saver.restore(sess, './models/lenet.ckpt')
     batch_size_test = 1
     if not y_test.shape[0] % batch_size_test:
         epoch_test = y_test.shape[0] // batch_size_test

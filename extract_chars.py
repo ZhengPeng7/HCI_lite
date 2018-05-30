@@ -2,9 +2,19 @@ import cv2
 import numpy as np
 
 
-def extract_chars(gray):
+def extract_chars(image):
     # initial seed would be at (0, 0) and make it white
-    gray[:20, :20] = 0
+    if isinstance(image, str):
+        gray = cv2.imread(image, 0)
+    elif isinstance(image, np.ndarray):
+        if len(image.shape) == 3:
+            gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+        else:
+            gray = image
+    gray[:20, :20] = 255
+    cv2.imshow('', gray)
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
     # get rid of margin
     for r in range(gray.shape[0]):
         if gray[r, :].any():

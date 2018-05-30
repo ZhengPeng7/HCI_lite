@@ -9,6 +9,9 @@ import formula_calc
 from config import (args, args_menu, MODE,
                     args_display, args_styleTransfer, args_calc, args_glass)
 
+import sys
+if len(sys.argv) > 1:
+    MODE = sys.argv[-1]
 
 # scene settings
 cv2.namedWindow('Amuse_park')
@@ -20,9 +23,9 @@ hei_frame, wid_frame = cap.read()[1].shape[:2]
 frame_fg = np.zeros((hei_frame, wid_frame, 3), dtype=np.uint8)  # front frame
 
 # Video writer
-fourcc = cv2.VideoWriter_fourcc(*'FLV1')
+fourcc = cv2.VideoWriter_fourcc(*'XVID')
 video_writer = cv2.VideoWriter(
-    'formula_evaluation.flv',
+    'formula_evaluation.avi',
     fourcc,
     20.0,
     (800, 600)
