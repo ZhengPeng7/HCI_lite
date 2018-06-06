@@ -3,6 +3,13 @@ import numpy as np
 
 
 def style_transfer(frame_bg, args_styleTransfer):
+    """
+    Description: The framework of transferring the style of video,
+                 according to "The Starry Night".
+    Params:
+        frame_bg: Frame of background and your body except for the top menu part.
+        args_styleTransfer: Arguments needed in the styleTransfer mode.
+    """
     img = cv2.resize(
         frame_bg,
         args_styleTransfer["content_target_resize"][2:0:-1],
@@ -52,6 +59,12 @@ def style_transfer(frame_bg, args_styleTransfer):
 
 
 def clothes_extraction(frame_bg, args_styleTransfer):
+    """
+    Description: Extract clothes areas.
+    Params:
+        frame_bg: Frame of background and your body except for the top menu part.
+        args_styleTransfer: Arguments needed in the styleTransfer mode.
+    """
     mask_figure = figure_extraction(frame_bg, args_styleTransfer)
     mask_figure = mask_figure.astype(np.uint8)
     cnts = cv2.findContours(mask_figure, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)[1]
@@ -74,6 +87,12 @@ def clothes_extraction(frame_bg, args_styleTransfer):
 
 
 def figure_extraction(frame_bg, args_styleTransfer):
+    """
+    Description: Extract figure areas.
+    Params:
+        frame_bg: Frame of background and your body except for the top menu part.
+        args_styleTransfer: Arguments needed in the styleTransfer mode.
+    """
     mask_figure = args_styleTransfer["fgbg"].apply(frame_bg)
     mask_figure = cv2.morphologyEx(
         mask_figure,
@@ -85,6 +104,12 @@ def figure_extraction(frame_bg, args_styleTransfer):
 
 
 def skin_extraction(frame_bg, args_styleTransfer):
+    """
+    Description: Extract skin areas.
+    Params:
+        frame_bg: Frame of background and your body except for the top menu part.
+        args_styleTransfer: Arguments needed in the styleTransfer mode.
+    """
     
     converted = cv2.cvtColor(frame_bg, cv2.COLOR_BGR2HSV)
     skinMask = cv2.inRange(converted, args_styleTransfer["skin_lower"], args_styleTransfer["skin_upper"])

@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 import ball_tracking
 import style_transfer
-import formula_calc
+import cut_grab
 import wear_glasses
 
 def video_mode(frame_bg, frame_fg, mode, args):
@@ -36,20 +36,16 @@ def mode_display(frame_bg, frame_fg, args_display, mode):
     return frame_bg, frame_fg, mode
 
 
-# def mode_gaming(frame_bg, frame_fg, args_gaming):
-#     return frame_bg, frame_fg
-
-
-def mode_calc(frame_bg, frame_fg, args_calc):
+def mode_grabCut(frame_bg, frame_fg, args_grabCut):
     """
-    Description: In calc mode. Main function is to calculate the hand written formula.
+    Description: In grabCut mode. Main function is to cut the grab...
     Params:
         frame_bg: The background layer.
         frame_fg: The canvas layer.
-        args_calc: The arguments used in args_calc mode.
+        args_grabCut: The arguments used in args_grabCut mode.
     """
-    frame_bg, frame_fg = formula_calc.formula_calc(frame_bg, frame_fg, args_calc)
-    # cv2.imshow('fg', frame_fg)
+    frame_bg = cut_grab.cut_grab(frame_bg, args_grabCut)
+
     return frame_bg, frame_fg
 
 
@@ -70,6 +66,13 @@ def mode_styleTransfer(frame_bg, frame_fg, args_styleTransfer):
 
 
 def mode_glass(frame_bg, frame_fg, args_glass):
+    """
+    Description: In glass mode, your eyes will be located with a pair of glass.
+    Params:
+        frame_bg: The background layer.
+        frame_fg: The canvas layer.
+        args_glass: The arguments used in glass mode.
+    """
     frame_bg = wear_glasses.wear_glasses(
         frame_bg, args_glass
     )

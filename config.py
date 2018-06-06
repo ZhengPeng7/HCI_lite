@@ -9,16 +9,17 @@ from im_transf_net import create_net
 # "display": Default value, of which ink would fade, with tracking effect,
 # "writing": Ink would not fade,
 # "gaming": Join in a shabby Arkanoid,
-# "calc": Do math evaluation from handwritten formula by OCR tech.
+# "calc": Do math evaluation from handwritten formula.
 #       "evaluation": evaluate the result of handwritten formula.
 # "glass": Help you wear a pair of glasses.
-# }
-MODE = "styleTransfer"
+# "styleTransfer": Transfer the style of the whole input or only your clothes.
+# }clothes
+MODE = "display"
 
 # argument settings
 args = {
     "video_source": 0,
-    "deque_buffer": 32,
+    "deque_buffer": 16,
     "orange_lower": (29, 86, 6),#(3, 103, 178),  # color range of ball in the HSV color space
     "orange_upper": (64, 255, 255),#(234, 255, 255),
 }
@@ -30,11 +31,11 @@ args_menu = {
         "color_blue": (253, 1, 1),
         "color_green": (1, 253, 1),
         "color_red": (1, 1, 253),
-        "color_purple": (161, 0, 161),
         "plus_icon": "images/plus_icon.png",
         "minus_icon": "images/minus_icon.png",
-        "color_redaa": "images/theStarryNight.jpg",
-        "color_purpleaa": "images/calculator.jpg",
+        "scissors_icon": "images/scissors.jpg",
+        "art_icon": "images/theStarryNight.jpg",
+        "glass_icon": "images/glass.jpg",
     },
     "icon_len_side": 80,
 }
@@ -63,8 +64,7 @@ args_styleTransfer = {
     'fgbg': cv2.bgsegm.createBackgroundSubtractorLSBP(),
     'kernel_open': cv2.getStructuringElement(cv2.MORPH_ELLIPSE,(3,3)),
     'show_detail': False,
-    'waiting_sec': 2,
-    'whole_scene': False,
+    'whole_scene': True,
 }
 
 # add rgb and bgr differences
@@ -72,7 +72,9 @@ args_styleTransfer["mask_rgb"] = np.ones(args_styleTransfer["content_target_resi
 args_styleTransfer["mask_rgb"][:, :args_styleTransfer["mask_rgb"].shape[1]//2, :] = 0
 
 # add sess
-sess = tf.Session()
+config = tf.ConfigProto()
+config.gpu_options.per_process_gpu_memory_fraction=0.3
+sess = tf.Session(config=config)
 args_styleTransfer["sess"] = sess
 
 # add X, Y
@@ -90,22 +92,15 @@ with tf.variable_scope('img_t_net'):
 model_saver = tf.train.Saver()
 model_saver.restore(args_styleTransfer["sess"], args_styleTransfer['model_path'])
 
-# arguments for calc
-args_calc = {
-    'font_color': (151, 0, 64),
-    'font_thickness': 3,
-    'font_style': cv2.FONT_HERSHEY_SIMPLEX,
-    "orange_lower": (29, 86, 6),        # (3, 103, 178),
-    "orange_upper": (64, 255, 255),     # (234, 255, 255),
-    'pts': args_display['pts'].copy(),
-    'thick_coeff': 2.5,
-    'deque_buffer': 32,
-    'res': '',    # 10,
-    'kernel_open': cv2.getStructuringElement(cv2.MORPH_ELLIPSE,(3,3)),
-}
 
 # arguments for wearing glasses
 args_glass = {
     'eye_cascade': cv2.CascadeClassifier('./models/haarcascade_eye.xml'),
     'glass_img': cv2.imread('./images/glass_image.jpg'),
+}
+
+# args for grabCut
+args_grabCut = {
+    "bg_capture": cv2.VideoCapture('./images/oasis'),
+    "ratio": 4,
 }

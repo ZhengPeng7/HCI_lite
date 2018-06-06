@@ -5,6 +5,12 @@ from im_transf_net import create_net
 
 
 def gen_model(args_styleTransfer, sess):
+    """
+    Description: Generate the model needed in style transfer.
+    Params:
+        args_styleTransfer: Arguments needed in the styleTransfer mode.
+        sess: The "place" where restored model is saved.
+    """
     model_path = args_styleTransfer['model_path']
     upsample_method = args_styleTransfer['upsample_method']
 
@@ -24,6 +30,12 @@ def gen_model(args_styleTransfer, sess):
 
 
 def styleTransfer(frame, args_styleTransfer, saver, sess):
+    """
+    Description: Do the style transfer.
+    Params:
+        frame: The frame_bg.
+        args_styleTransfer: Arguments needed in the styleTransfer mode.
+    """
     model_path = args_styleTransfer['model_path']
     upsample_method = args_styleTransfer['upsample_method']
     content_target_resize = args_styleTransfer['content_target_resize']

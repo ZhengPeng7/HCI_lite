@@ -4,16 +4,19 @@ import face_recognition
 
 
 def wear_glasses(frame, args_glass):
+    """
+    Description: Locate the eyes, and attach the glasses onto them,
+                 of which the size would adapt to that of eyes simultaneously.
+    Params:
+        frame: The bg_frame.
+        args_glass: Arguments needed in the glass mode.
+    """
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
     centers = []
-
-    face_locations = face_recognition.face_locations(frame)
-    for (top, right, bottom, left) in face_locations:
-        roi_gray = gray[top:bottom, left:right]
-        eyes = args_glass['eye_cascade'].detectMultiScale(roi_gray)
-        for (ex, ey, ew, eh) in eyes:
-            centers.append((left + int(ex + 0.5 * ew), top + int(ey + 0.5 * eh)))
+    eyes = args_glass['eye_cascade'].detectMultiScale(gray)
+    for (ex, ey, ew, eh) in eyes:
+        centers.append((int(ex + 0.5 * ew), int(ey + 0.5 * eh)))
 
     if len(centers) == 2:
         glasses_width = 2.16 * abs(centers[1][0] - centers[0][0])
@@ -21,16 +24,22 @@ def wear_glasses(frame, args_glass):
         h, w = args_glass['glass_img'].shape[:2]
         scaling_factor = glasses_width / w
 
-        overlay_glasses = cv2.resize(args_glass['glass_img'], None, fx=scaling_factor, fy=scaling_factor, interpolation=cv2.INTER_AREA)
+        overlay_glasses = cv2.resize(
+            args_glass['glass_img'], None,
+            fx=scaling_factor, fy=scaling_factor, interpolation=cv2.INTER_AREA
+        )
 
-        x = centers[0][0] if centers[0][0] < centers[1][0] else centers[1][0]
+        x = min(centers[0][0], centers[1][0])
+        y = min(centers[0][1], centers[1][1])
 
         x -= 0.26 * overlay_glasses.shape[1]
-        y = top
-        y += 0.55 * overlay_glasses.shape[0]
+        y -= 0.25 * overlay_glasses.shape[0]
 
         h, w = overlay_glasses.shape[:2]
-        overlay_img[int(y):int(y + h), int(x):int(x + w)] = overlay_glasses
+        try:
+            overlay_img[int(y):int(y + h), int(x):int(x + w)] = overlay_glasses
+        except:
+            return frame
 
         # Create a mask and generate it's inverse.
         gray_glasses = cv2.cvtColor(overlay_img, cv2.COLOR_BGR2GRAY)

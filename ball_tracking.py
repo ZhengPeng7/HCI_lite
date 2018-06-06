@@ -36,20 +36,23 @@ def ball_tracking(frame_bg_without_menu, frame_fg, args_display, MODE):
                 )
             # move into top menu
             if center[1] < args_menu["icon_len_side"]:
-                if center[0] < args_menu["icon_len_side"] * 4:
+                if center[0] < args_menu["icon_len_side"] * 3:
                     args_display["drawing_color"] = list(
                         args_menu["menu_dict"].values()
                     )[center[0] // args_menu["icon_len_side"]]
                     args_display["is_start"] = 0
-                elif center[0] < args_menu["icon_len_side"] * 5:
+                elif center[0] < args_menu["icon_len_side"] * 4:
                     args_display["thick_coeff"] = min(17.0, args_display["thick_coeff"] * 1.03)
-                elif center[0] < args_menu["icon_len_side"] * 6:
+                elif center[0] < args_menu["icon_len_side"] * 5:
                     args_display["thick_coeff"] = max(1.7, args_display["thick_coeff"] / 1.03)
+                elif center[0] < args_menu["icon_len_side"] * 6:
+                    MODE = "grabCut"
+                    return frame_fg, args_display, MODE
                 elif center[0] < args_menu["icon_len_side"] * 7:
                     MODE = 'styleTransfer'
                     return frame_fg, args_display, MODE
                 elif center[0] < args_menu["icon_len_side"] * 8:
-                    MODE = 'calc'
+                    MODE = 'glass'
                     return frame_fg, args_display, MODE
                 else:
                     pass

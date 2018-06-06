@@ -5,9 +5,9 @@ import matplotlib.pyplot as plt
 import menu_top
 import video_mode
 import ball_tracking
-import formula_calc
-from config import (args, args_menu, MODE,
-                    args_display, args_styleTransfer, args_calc, args_glass)
+import cut_grab
+from config import (args, args_menu, MODE, args_display, args_grabCut,
+                    args_styleTransfer, args_glass)
 
 import sys
 if len(sys.argv) > 1:
@@ -25,7 +25,7 @@ frame_fg = np.zeros((hei_frame, wid_frame, 3), dtype=np.uint8)  # front frame
 # Video writer
 fourcc = cv2.VideoWriter_fourcc(*'XVID')
 video_writer = cv2.VideoWriter(
-    'formula_evaluation.avi',
+    MODE + '.avi',
     fourcc,
     20.0,
     (800, 600)
@@ -35,38 +35,6 @@ while cap.isOpened():
     iteration_start = time.time()
     ret, frame_bg = cap.read()
     cv2.flip(frame_bg, 1, frame_bg)
-
-    # Turn into styleTransfer mode needs several secs to let move away from cap
-    if MODE == "styleTransfer" and args_styleTransfer["waiting_sec"] > 0:
-        args_styleTransfer["waiting_sec"] -= 1
-        frame_waiting_before_styleTransfer = np.random.randint(
-            0, 256, (600, 1300, 3), dtype=np.uint8
-        )
-        cv2.putText(
-            frame_waiting_before_styleTransfer,
-            "Please move away from the screen.",
-            (32, 300), cv2.FONT_HERSHEY_SIMPLEX, 2, (0, 0, 255), 4
-        )
-        cv2.putText(
-            frame_waiting_before_styleTransfer,
-            ''.join(
-                (
-                    "Style transfering will start in ",
-                    str(args_styleTransfer["waiting_sec"]),
-                    ('seconds' if args_styleTransfer["waiting_sec"] > 1 else 'second'),
-                    '...'
-                )
-            ),
-            (32, 400), cv2.FONT_HERSHEY_SIMPLEX, 2, (0, 0, 255), 4
-        )
-        cv2.imshow(
-            'Amuse_park',
-            frame_waiting_before_styleTransfer
-        )
-        cv2.waitKey(1000)
-        args_styleTransfer["waiting_sec"] -= 1
-        continue
-
 
     # The most essential part, ranging different modes
     frame_bg, frame_fg, MODE = video_mode.video_mode(frame_bg, frame_fg, MODE, eval('args_'+MODE))
@@ -104,23 +72,19 @@ while cap.isOpened():
     key = cv2.waitKey(10) & 0xFF
     if key == ord('q'):
         break
-    # elif key == ord("g"):
-    #     frame_fg = np.zeros((hei_frame, wid_frame, 3), dtype=np.uint8)
-    #     MODE = "gaming"
     elif key == ord("d"):
         frame_fg = np.zeros((hei_frame, wid_frame, 3), dtype=np.uint8)
         MODE = "display"
-    elif key == ord("c"):
-        frame_fg = np.zeros((hei_frame, wid_frame, 3), dtype=np.uint8)
-        args_calc["res"] = ''
-        MODE = "calc"
     elif key == ord("t"):
+        args_styleTransfer["waiting_sec"] = 2
         frame_fg = np.zeros((hei_frame, wid_frame, 3), dtype=np.uint8)
         MODE = "styleTransfer"
-    elif key == ord("e"):
-        args_calc["res"] = formula_calc.evaluation(frame_fg, args_calc)
     elif key == ord("g"):
+        frame_fg = np.zeros((hei_frame, wid_frame, 3), dtype=np.uint8)
         MODE = "glass"
+    elif key == ord("c"):
+        frame_fg = np.zeros((hei_frame, wid_frame, 3), dtype=np.uint8)
+        MODE = "grabCut"
     else:
         pass
 
