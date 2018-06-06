@@ -80,11 +80,11 @@ video mode setting: {
   3. ~~Afterwards, recognize each single character.~~
   4. ~~Finally, evaluate the stitched string.~~
 
-- ###![#1589F0](https://placehold.it/15/1589F0/000000?text=+)Figure Extraction:
+- ### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+)Figure Extraction:
 
   ​	__Algorithm__: [grabCut](http://www.cad.zju.edu.cn/home/gfzhang/course/computational-photography/proj1-grabcut/grabcut.html).
 
-- ### ![#c5f015](https://placehold.it/15/c5f015/000000?text=+)Glass mode:
+- ###  ![#c5f015](https://placehold.it/15/c5f015/000000?text=+)Glass mode:
 
   __Algorithms:__ [Haarcascade](https://docs.opencv.org/trunk/d7/d8b/tutorial_py_face_detection.html).
 
