@@ -1,22 +1,20 @@
+
+'''
+video mode setting: {
+    "display": Random colors, While ink would fade, like tails,
+    "styleTransfer": Stylize the whole input from webcam or only your clothes,
+    "grabCut": Move you from the whole scene to a new video,
+    "glass": Help you wear a pair of glasses,
+    "AR": Build a roof on the plane you choose,
+}
+'''
 from collections import deque
 import tensorflow as tf
 import numpy as np
 import cv2
 from im_transf_net import create_net
 from plane_ar import App
-
-'''
-video mode setting: {
-"display": Default value, of which ink would fade, with tracking effect,
-"writing": Ink would not fade,
-"gaming": Join in a shabby Arkanoid,
-"calc": Do math evaluation from handwritten formula.
-      "evaluation": evaluate the result of handwritten formula.
-"glass": Help you wear a pair of glasses.
-"styleTransfer": Transfer the style of the whole input or only your clothes.
-}
-'''
-# print(__doc__)
+print(__doc__)
 MODE = "display"
 
 # argument settings

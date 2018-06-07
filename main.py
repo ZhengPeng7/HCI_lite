@@ -65,6 +65,7 @@ while cap.isOpened():
     fps = str(round(1 / (time.time() - iteration_start), 2))
     frame = cv2.resize(frame, (800, 600))
     cv2.putText(frame, 'FPS: '+fps, (10, 50), cv2.FONT_HERSHEY_COMPLEX, 2, (0, 255, 255), 3)
+    cv2.putText(frame, 'MODE: '+MODE, (10, 123), cv2.FONT_HERSHEY_COMPLEX, 1, (0, 0, 0), 1)
     video_writer.write(frame)
     cv2.imshow('Amuse_park', frame)
 

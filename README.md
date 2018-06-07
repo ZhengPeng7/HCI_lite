@@ -42,16 +42,19 @@ video mode setting: {
     "styleTransfer": Stylize the whole input from webcam or only your clothes,
     "grabCut": Move you from the whole scene to a new video,
     "glass": Help you wear a pair of glasses,
+    "AR": Build a roof on the plane you choose,
 }
 ```
 
+### __Overall__:
 
+![overall](./images/overall.gif)
 
 - ### Display mode:
 
   __Algorithms__: Nothing is worth mention.
 
-  Drawing in the air.
+  ![Drawing_in_the_air](./images/display.gif)
 
 - ### ![#f03c15](https://placehold.it/15/f03c15/000000?text=+)StyleTransfer mode:
 
@@ -84,6 +87,8 @@ video mode setting: {
 
   ​	__Algorithm__: [grabCut](http://www.cad.zju.edu.cn/home/gfzhang/course/computational-photography/proj1-grabcut/grabcut.html).
 
+  ![grabCut](./images/grabCut.gif)
+
 - ###  ![#c5f015](https://placehold.it/15/c5f015/000000?text=+)Glass mode:
 
   __Algorithms:__ [Haarcascade](https://docs.opencv.org/trunk/d7/d8b/tutorial_py_face_detection.html).
@@ -93,3 +98,5 @@ video mode setting: {
 - ### AR for Time Tower
 
   __Algorithms:__ [3d_calibration](https://docs.opencv.org/2.4/modules/calib3d/doc/camera_calibration_and_3d_reconstruction.html#solvepnp).
+
+  ![AR](./images/AR.gif)
