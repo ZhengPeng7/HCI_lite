@@ -7,15 +7,15 @@ import video_mode
 import ball_tracking
 import cut_grab
 from config import (args, args_menu, MODE, args_display, args_grabCut,
-                    args_styleTransfer, args_glass)
+                    args_styleTransfer, args_glass, args_AR)
 
 import sys
 if len(sys.argv) > 1:
     MODE = sys.argv[-1]
 
 # scene settings
-cv2.namedWindow('Amuse_park')
-cv2.moveWindow('Amuse_park', 300, 20)
+# cv2.namedWindow('Amuse_park')
+# cv2.moveWindow('Amuse_park', 300, 20)
 
 # preparation for tool variables
 cap = cv2.VideoCapture(args["video_source"])
@@ -85,6 +85,12 @@ while cap.isOpened():
     elif key == ord("c"):
         frame_fg = np.zeros((hei_frame, wid_frame, 3), dtype=np.uint8)
         MODE = "grabCut"
+    elif key == ord("a"):
+        frame_fg = np.zeros((hei_frame, wid_frame, 3), dtype=np.uint8)
+        MODE = "AR"
+    elif key == ord("k"):
+        if MODE == "AR":
+            args_AR['app_ar'].tracker.clear()
     else:
         pass
 

@@ -59,7 +59,7 @@ video mode setting: {
 
 1. #### Whole input is stylized except my body:
 
-   __Algorithms:__ Skin Detection + Basic Morphology operations, etc.
+   __Algorithms:__ [HSV Color Space](https://www.pyimagesearch.com/2014/08/18/skin-detection-step-step-example-using-python-opencv/), [Basic Morphology operations](https://docs.opencv.org/3.0-beta/doc/py_tutorials/py_imgproc/py_morphological_ops/py_morphological_ops.html), etc.
 
    ![Background_and_clothes_stylized](./images/Background_and_clothes_stylized.png)
 

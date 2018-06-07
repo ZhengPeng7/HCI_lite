@@ -77,3 +77,18 @@ def mode_glass(frame_bg, frame_fg, args_glass):
         frame_bg, args_glass
     )
     return frame_bg, frame_fg
+
+
+def mode_AR(frame_bg, frame_fg, args_AR):
+    """
+    Description: Modified from opencv sample -- plane_ar.
+                 In this mode, you can select a rect to build a roof on it.
+    Params:
+        frame_bg: The background layer.
+        frame_fg: The canvas layer.
+        args_AR: The arguments used in AR mode.
+    """
+    frame_bg = args_AR['app_ar'].run(
+        frame_bg
+    )
+    return frame_bg, frame_fg

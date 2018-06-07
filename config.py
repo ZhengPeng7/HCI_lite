@@ -3,17 +3,20 @@ import tensorflow as tf
 import numpy as np
 import cv2
 from im_transf_net import create_net
+from plane_ar import App
 
-
-# video mode setting: {
-# "display": Default value, of which ink would fade, with tracking effect,
-# "writing": Ink would not fade,
-# "gaming": Join in a shabby Arkanoid,
-# "calc": Do math evaluation from handwritten formula.
-#       "evaluation": evaluate the result of handwritten formula.
-# "glass": Help you wear a pair of glasses.
-# "styleTransfer": Transfer the style of the whole input or only your clothes.
-# }clothes
+'''
+video mode setting: {
+"display": Default value, of which ink would fade, with tracking effect,
+"writing": Ink would not fade,
+"gaming": Join in a shabby Arkanoid,
+"calc": Do math evaluation from handwritten formula.
+      "evaluation": evaluate the result of handwritten formula.
+"glass": Help you wear a pair of glasses.
+"styleTransfer": Transfer the style of the whole input or only your clothes.
+}
+'''
+# print(__doc__)
 MODE = "display"
 
 # argument settings
@@ -103,4 +106,11 @@ args_glass = {
 args_grabCut = {
     "bg_capture": cv2.VideoCapture('./images/oasis'),
     "ratio": 4,
+}
+
+cv2.namedWindow('Amuse_park')
+cv2.moveWindow('Amuse_park', 300, 20)
+# arguments for plane_ar
+args_AR = {
+    'app_ar': App(),
 }
