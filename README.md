@@ -14,19 +14,19 @@
 > |              Finishing sunglasses wearing mode.              | 5/14/2018  | 5/15/2018 |
 > |      Refining my documents and improving the stability.      | 5/13/2018  |    ...    |
 > |                    __Development SumUp__                     | 5/10/2018  | 5/15/2018 |
-> |       __Substitude 'grabCut for formula_evaluation'__        |  6/6/2018  | 6/6/2018  |
+> |      __Substitude 'grabCut' for 'formula_evaluation'__       |  6/6/2018  | 6/6/2018  |
+> |                           AR mode                            |  6/7/2018  | 6/7/2018  |
 
 
 
 ## Dependencies:
 
-    OpenCV==3.4.0
+    OpenCV==4.0.0-pre	# With opencv-contrib
     numpy==1.14.3
     matplotlib==2.2.2
     tensorflow-gpu==1.8.0    # CUDA=9, CUDNN=7.
     scikit-learn==0.19.1
     Keras==2.1.6
-    face-recognition==1.2.2
 
 
 ## Outline:
@@ -95,7 +95,9 @@ video mode setting: {
 
   ![glass_mode](./images/glass_mode.gif)
 
-- ### AR for Time Tower
+- ### ![#a100a1](https://placehold.it/15/a100a1/000000?text=+)AR of building roof on a plane
+
+  >  Modified from [plane_ar sample in opencv](https://github.com/opencv/opencv/blob/master/samples/python/plane_ar.py)
 
   __Algorithms:__ [3d_calibration](https://docs.opencv.org/2.4/modules/calib3d/doc/camera_calibration_and_3d_reconstruction.html#solvepnp).
 
