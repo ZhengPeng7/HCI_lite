@@ -7,6 +7,9 @@ fgbg = cv2.bgsegm.createBackgroundSubtractorMOG()
 
 while cap.isOpened():
     ret, frame = cap.read()
+    if not ret:
+        print('ret:', ret)
+        break
 
     fgmask = fgbg.apply(frame)
 
