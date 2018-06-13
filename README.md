@@ -1,8 +1,9 @@
 # HCI_lite
-> A lite human computer interaction system, mainly dependent on you 'handler' in your webcam.
-> Author: Peng Zheng.
+> __Description__: A lite human computer interaction system, mainly dependent on you 'handler' in your webcam.
 >
-> Duration: 
+> __Author__: Peng Zheng.
+>
+> __Duration__: 
 >
 > |                           Progress                           | Start Date | Deadline  |
 > | :----------------------------------------------------------: | :--------: | :-------: |
