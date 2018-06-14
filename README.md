@@ -65,7 +65,7 @@ video mode setting: {
 
 - ### ![#f03c15](https://placehold.it/15/f03c15/000000?text=+)StyleTransfer mode:
 
-  Style image: Yes..., it's The Starry Night again(@...@)! Here she comes:![The_Starry_Night](./images/theStarryNight.jpg).
+  Stylize image: Yes..., it's \<\<The Starry Night\>\> again(@...@)! Here she comes:![The_Starry_Night](./images/theStarryNight_big.jpg).
 
 1. #### Whole input is stylized except my body:
 
