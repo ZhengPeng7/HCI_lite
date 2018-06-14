@@ -37,7 +37,7 @@
 
 +--.vscode
 
-|&emsp;&emsp;+--settings.json
+|&emsp;&emsp;&emsp;+--settings.json
 
 +--main.py
 
@@ -45,111 +45,111 @@
 
 +--samples
 
-|&emsp;&emsp;+--pikachu.jpg
+|&emsp;&emsp;&emsp;+--pikachu.jpg
 
-|&emsp;&emsp;+--have_pikachu.py
+|&emsp;&emsp;&emsp;+--have_pikachu.py
 
-|&emsp;&emsp;+--vtest.avi
+|&emsp;&emsp;&emsp;+--vtest.avi
 
-|&emsp;&emsp;+--pikachu_0.jpg
+|&emsp;&emsp;&emsp;+--pikachu_0.jpg
 
-|&emsp;&emsp;+--pedestrian_detection.py
+|&emsp;&emsp;&emsp;+--pedestrian_detection.py
 
 +--config.py
 
 +--modes
 
-|&emsp;&emsp;+--video_mode.py
+|&emsp;&emsp;&emsp;+--video_mode.py
 
-|&emsp;&emsp;+--display_mode
+|&emsp;&emsp;&emsp;+--display_mode
 
-|&emsp;&emsp;|&emsp;&emsp;+--menu_top.py
+|&emsp;&emsp;&emsp;|&emsp;&emsp;&emsp;+--menu_top.py
 
-|&emsp;&emsp;|&emsp;&emsp;+--ball_tracking.py
+|&emsp;&emsp;&emsp;|&emsp;&emsp;&emsp;+--ball_tracking.py
 
-|&emsp;&emsp;+--AR_mode
+|&emsp;&emsp;&emsp;+--AR_mode
 
-|&emsp;&emsp;|&emsp;&emsp;+--plane_ar.py
+|&emsp;&emsp;&emsp;|&emsp;&emsp;&emsp;+--plane_ar.py
 
-|&emsp;&emsp;|&emsp;&emsp;+--common.py
+|&emsp;&emsp;&emsp;|&emsp;&emsp;&emsp;+--common.py
 
-|&emsp;&emsp;|&emsp;&emsp;+--video.py
+|&emsp;&emsp;&emsp;|&emsp;&emsp;&emsp;+--video.py
 
-|&emsp;&emsp;|&emsp;&emsp;+--plane_tracker.py
+|&emsp;&emsp;&emsp;|&emsp;&emsp;&emsp;+--plane_tracker.py
 
-|&emsp;&emsp;|&emsp;&emsp;+--tst_scene_render.py
+|&emsp;&emsp;&emsp;|&emsp;&emsp;&emsp;+--tst_scene_render.py
 
-|&emsp;&emsp;+--styleTransfer_mode
+|&emsp;&emsp;&emsp;+--styleTransfer_mode
 
-|&emsp;&emsp;|&emsp;&emsp;+--style_transfer.py
+|&emsp;&emsp;&emsp;|&emsp;&emsp;&emsp;+--style_transfer.py
 
-|&emsp;&emsp;|&emsp;&emsp;+--stylize_img.py
+|&emsp;&emsp;&emsp;|&emsp;&emsp;&emsp;+--stylize_img.py
 
-|&emsp;&emsp;|&emsp;&emsp;+--im_transf_net.py
+|&emsp;&emsp;&emsp;|&emsp;&emsp;&emsp;+--im_transf_net.py
 
-|&emsp;&emsp;+--grabCut_mode
+|&emsp;&emsp;&emsp;+--grabCut_mode
 
-|&emsp;&emsp;|&emsp;&emsp;+--cut_grab.py
+|&emsp;&emsp;&emsp;|&emsp;&emsp;&emsp;+--cut_grab.py
 
-|&emsp;&emsp;+--glass_mode
+|&emsp;&emsp;&emsp;+--glass_mode
 
-|&emsp;&emsp;|&emsp;&emsp;+--wear_glasses.py
+|&emsp;&emsp;&emsp;|&emsp;&emsp;&emsp;+--wear_glasses.py
 
 +--show_tree_structure.py
 
 +--paper_references
 
-|&emsp;&emsp;+--Guo_Background_Subtraction_Using_CVPR_2016_paper.pdf
+|&emsp;&emsp;&emsp;+--Guo_Background_Subtraction_Using_CVPR_2016_paper.pdf
 
 +--images
 
-|&emsp;&emsp;+--grabCut_sample.png
+|&emsp;&emsp;&emsp;+--grabCut_sample.png
 
-|&emsp;&emsp;+--Only_stylize_clothes.png
+|&emsp;&emsp;&emsp;+--Only_stylize_clothes.png
 
-|&emsp;&emsp;+--project_structure.txt
+|&emsp;&emsp;&emsp;+--project_structure.txt
 
-|&emsp;&emsp;+--Only_clothes_stylized.png
+|&emsp;&emsp;&emsp;+--Only_clothes_stylized.png
 
-|&emsp;&emsp;+--outline.svg
+|&emsp;&emsp;&emsp;+--outline.svg
 
-|&emsp;&emsp;+--AR.gif
+|&emsp;&emsp;&emsp;+--AR.gif
 
-|&emsp;&emsp;+--grabCut.gif
+|&emsp;&emsp;&emsp;+--grabCut.gif
 
-|&emsp;&emsp;+--display.gif
+|&emsp;&emsp;&emsp;+--display.gif
 
-|&emsp;&emsp;+--scissors.jpg
+|&emsp;&emsp;&emsp;+--scissors.jpg
 
-|&emsp;&emsp;+--minus_icon.png
+|&emsp;&emsp;&emsp;+--minus_icon.png
 
-|&emsp;&emsp;+--oasis
+|&emsp;&emsp;&emsp;+--oasis
 
-|&emsp;&emsp;+--glass_mode.gif
+|&emsp;&emsp;&emsp;+--glass_mode.gif
 
-|&emsp;&emsp;+--glass_image.jpg
+|&emsp;&emsp;&emsp;+--glass_image.jpg
 
-|&emsp;&emsp;+--plus_icon.png
+|&emsp;&emsp;&emsp;+--plus_icon.png
 
-|&emsp;&emsp;+--Background_and_clothes_stylized.png
+|&emsp;&emsp;&emsp;+--Background_and_clothes_stylized.png
 
-|&emsp;&emsp;+--theStarryNight.jpg
+|&emsp;&emsp;&emsp;+--theStarryNight.jpg
 
-|&emsp;&emsp;+--glass.jpg
+|&emsp;&emsp;&emsp;+--glass.jpg
 
-|&emsp;&emsp;+--overall.gif
+|&emsp;&emsp;&emsp;+--overall.gif
 
-|&emsp;&emsp;+--Stylization.gif
+|&emsp;&emsp;&emsp;+--Stylization.gif
 
 +--README.md
 
 +--models
 
-|&emsp;&emsp;+--starry_final.ckpt.index
+|&emsp;&emsp;&emsp;+--starry_final.ckpt.index
 
-|&emsp;&emsp;+--starry_final.ckpt.data-00000-of-00001
+|&emsp;&emsp;&emsp;+--starry_final.ckpt.data-00000-of-00001
 
-|&emsp;&emsp;+--haarcascade_eye.xml
+|&emsp;&emsp;&emsp;+--haarcascade_eye.xml
 
 
 
