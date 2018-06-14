@@ -1,9 +1,8 @@
 import numpy as np
 import cv2
 from collections import namedtuple
-import video
-import common
-from video import presets
+from .common import RectSelector
+from .video import presets, create_capture
 
 
 FLANN_INDEX_KDTREE = 1
@@ -108,13 +107,13 @@ class PlaneTracker:
 
 class App:
     def __init__(self, src):
-        self.cap = video.create_capture(src, presets['book'])
+        self.cap = create_capture(src, presets['book'])
         self.frame = None
         self.paused = False
         self.tracker = PlaneTracker()
 
         cv2.namedWindow('plane')
-        self.rect_sel = common.RectSelector('plane', self.on_rect)
+        self.rect_sel = RectSelector('plane', self.on_rect)
 
     def on_rect(self, rect):
         self.tracker.add_target(self.frame, rect)

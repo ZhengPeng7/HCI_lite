@@ -2,10 +2,8 @@ import cv2
 import numpy as np
 import time
 import matplotlib.pyplot as plt
-import menu_top
-import video_mode
-import ball_tracking
-import cut_grab
+from modes.display_mode import menu_top
+from modes.video_mode import video_mode
 from config import (args, args_menu, MODE, args_display, args_grabCut,
                     args_styleTransfer, args_glass, args_AR)
 
@@ -37,7 +35,7 @@ while cap.isOpened():
     cv2.flip(frame_bg, 1, frame_bg)
 
     # The most essential part, ranging different modes
-    frame_bg, frame_fg, MODE = video_mode.video_mode(frame_bg, frame_fg, MODE, eval('args_'+MODE))
+    frame_bg, frame_fg, MODE = video_mode(frame_bg, frame_fg, MODE, eval('args_'+MODE))
 
     mask_fg = frame_fg > 0
 

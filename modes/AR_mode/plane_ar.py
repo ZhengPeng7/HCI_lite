@@ -1,14 +1,12 @@
 import numpy as np
 import cv2
-import video
-import common
-from plane_tracker import PlaneTracker
-from video import presets
+from .common import RectSelector
+from .plane_tracker import PlaneTracker
+from .video import presets
 
 
 class App:
     def __init__(self):
-        # self.cap = video.create_capture(src, presets['book'])
         self.frame = None
         self.paused = False
         self.tracker = PlaneTracker()
@@ -20,7 +18,7 @@ class App:
                          (0, 4), (1, 5), (2, 6), (3, 7),
                          (4, 8), (5, 8), (6, 9), (7, 9), (8, 9)]
 
-        self.rect_sel = common.RectSelector('Amuse_park', self.on_rect)
+        self.rect_sel = RectSelector('Amuse_park', self.on_rect)
 
     def on_rect(self, rect):
         self.tracker.add_target(self.frame, rect)

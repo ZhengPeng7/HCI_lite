@@ -1,4 +1,3 @@
-
 '''
 video mode setting: {
     "display": Random colors, While ink would fade, like tails,
@@ -12,8 +11,8 @@ from collections import deque
 import tensorflow as tf
 import numpy as np
 import cv2
-from im_transf_net import create_net
-from plane_ar import App
+from modes.styleTransfer_mode.im_transf_net import create_net
+from modes.AR_mode.plane_ar import App
 print(__doc__)
 MODE = "display"
 

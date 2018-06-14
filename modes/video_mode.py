@@ -1,9 +1,10 @@
 import cv2
 import numpy as np
-import ball_tracking
-import style_transfer
-import cut_grab
-import wear_glasses
+from modes.display_mode import ball_tracking
+from modes.styleTransfer_mode import style_transfer
+from modes.grabCut_mode import cut_grab
+from modes.glass_mode import wear_glasses
+
 
 def video_mode(frame_bg, frame_fg, mode, args):
     """

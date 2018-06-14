@@ -41,8 +41,8 @@ import cv2 as cv
 from time import clock
 
 # local modules
-from tst_scene_render import TestSceneRender
-import common
+from .tst_scene_render import TestSceneRender
+from .common import lookat, mtx2rvec
 
 class VideoSynthBase(object):
     def __init__(self, size=None, noise=0.0, bg = None, **params):
@@ -147,8 +147,8 @@ class Chess(VideoSynthBase):
         eye_pos = center + np.array([cos(t)*c, sin(t)*c, s]) * 15.0 + ofs
         target_pos = center + ofs
 
-        R, self.tvec = common.lookat(eye_pos, target_pos)
-        self.rvec = common.mtx2rvec(R)
+        R, self.tvec = lookat(eye_pos, target_pos)
+        self.rvec = mtx2rvec(R)
 
         self.draw_quads(dst, self.white_quads, (245, 245, 245))
         self.draw_quads(dst, self.black_quads, (10, 10, 10))

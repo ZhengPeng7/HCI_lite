@@ -1,6 +1,5 @@
 import cv2
 import numpy as np
-import face_recognition
 
 
 def wear_glasses(frame, args_glass):
