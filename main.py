@@ -6,8 +6,9 @@ from modes.display_mode import menu_top
 from modes.video_mode import video_mode
 from config import (args, args_menu, MODE, args_display, args_grabCut,
                     args_styleTransfer, args_glass, args_AR)
-
 import sys
+
+
 if len(sys.argv) > 1:
     MODE = sys.argv[-1]
 
