@@ -37,7 +37,7 @@
 
 +--.vscode
 
-|&emsp;+--settings.json
+|&emsp;&emsp;+--settings.json
 
 +--main.py
 
@@ -45,111 +45,111 @@
 
 +--samples
 
-|&emsp;+--pikachu.jpg
+|&emsp;&emsp;+--pikachu.jpg
 
-|&emsp;+--have_pikachu.py
+|&emsp;&emsp;+--have_pikachu.py
 
-|&emsp;+--vtest.avi
+|&emsp;&emsp;+--vtest.avi
 
-|&emsp;+--pikachu_0.jpg
+|&emsp;&emsp;+--pikachu_0.jpg
 
-|&emsp;+--pedestrian_detection.py
+|&emsp;&emsp;+--pedestrian_detection.py
 
 +--config.py
 
 +--modes
 
-|&emsp;+--video_mode.py
+|&emsp;&emsp;+--video_mode.py
 
-|&emsp;+--display_mode
+|&emsp;&emsp;+--display_mode
 
-|&emsp;|&emsp;+--menu_top.py
+|&emsp;&emsp;|&emsp;&emsp;+--menu_top.py
 
-|&emsp;|&emsp;+--ball_tracking.py
+|&emsp;&emsp;|&emsp;&emsp;+--ball_tracking.py
 
-|&emsp;+--AR_mode
+|&emsp;&emsp;+--AR_mode
 
-|&emsp;|&emsp;+--plane_ar.py
+|&emsp;&emsp;|&emsp;&emsp;+--plane_ar.py
 
-|&emsp;|&emsp;+--common.py
+|&emsp;&emsp;|&emsp;&emsp;+--common.py
 
-|&emsp;|&emsp;+--video.py
+|&emsp;&emsp;|&emsp;&emsp;+--video.py
 
-|&emsp;|&emsp;+--plane_tracker.py
+|&emsp;&emsp;|&emsp;&emsp;+--plane_tracker.py
 
-|&emsp;|&emsp;+--tst_scene_render.py
+|&emsp;&emsp;|&emsp;&emsp;+--tst_scene_render.py
 
-|&emsp;+--styleTransfer_mode
+|&emsp;&emsp;+--styleTransfer_mode
 
-|&emsp;|&emsp;+--style_transfer.py
+|&emsp;&emsp;|&emsp;&emsp;+--style_transfer.py
 
-|&emsp;|&emsp;+--stylize_img.py
+|&emsp;&emsp;|&emsp;&emsp;+--stylize_img.py
 
-|&emsp;|&emsp;+--im_transf_net.py
+|&emsp;&emsp;|&emsp;&emsp;+--im_transf_net.py
 
-|&emsp;+--grabCut_mode
+|&emsp;&emsp;+--grabCut_mode
 
-|&emsp;|&emsp;+--cut_grab.py
+|&emsp;&emsp;|&emsp;&emsp;+--cut_grab.py
 
-|&emsp;+--glass_mode
+|&emsp;&emsp;+--glass_mode
 
-|&emsp;|&emsp;+--wear_glasses.py
+|&emsp;&emsp;|&emsp;&emsp;+--wear_glasses.py
 
 +--show_tree_structure.py
 
 +--paper_references
 
-|&emsp;+--Guo_Background_Subtraction_Using_CVPR_2016_paper.pdf
+|&emsp;&emsp;+--Guo_Background_Subtraction_Using_CVPR_2016_paper.pdf
 
 +--images
 
-|&emsp;+--grabCut_sample.png
+|&emsp;&emsp;+--grabCut_sample.png
 
-|&emsp;+--Only_stylize_clothes.png
+|&emsp;&emsp;+--Only_stylize_clothes.png
 
-|&emsp;+--project_structure.txt
+|&emsp;&emsp;+--project_structure.txt
 
-|&emsp;+--Only_clothes_stylized.png
+|&emsp;&emsp;+--Only_clothes_stylized.png
 
-|&emsp;+--outline.svg
+|&emsp;&emsp;+--outline.svg
 
-|&emsp;+--AR.gif
+|&emsp;&emsp;+--AR.gif
 
-|&emsp;+--grabCut.gif
+|&emsp;&emsp;+--grabCut.gif
 
-|&emsp;+--display.gif
+|&emsp;&emsp;+--display.gif
 
-|&emsp;+--scissors.jpg
+|&emsp;&emsp;+--scissors.jpg
 
-|&emsp;+--minus_icon.png
+|&emsp;&emsp;+--minus_icon.png
 
-|&emsp;+--oasis
+|&emsp;&emsp;+--oasis
 
-|&emsp;+--glass_mode.gif
+|&emsp;&emsp;+--glass_mode.gif
 
-|&emsp;+--glass_image.jpg
+|&emsp;&emsp;+--glass_image.jpg
 
-|&emsp;+--plus_icon.png
+|&emsp;&emsp;+--plus_icon.png
 
-|&emsp;+--Background_and_clothes_stylized.png
+|&emsp;&emsp;+--Background_and_clothes_stylized.png
 
-|&emsp;+--theStarryNight.jpg
+|&emsp;&emsp;+--theStarryNight.jpg
 
-|&emsp;+--glass.jpg
+|&emsp;&emsp;+--glass.jpg
 
-|&emsp;+--overall.gif
+|&emsp;&emsp;+--overall.gif
 
-|&emsp;+--Stylization.gif
+|&emsp;&emsp;+--Stylization.gif
 
 +--README.md
 
 +--models
 
-|&emsp;+--starry_final.ckpt.index
+|&emsp;&emsp;+--starry_final.ckpt.index
 
-|&emsp;+--starry_final.ckpt.data-00000-of-00001
+|&emsp;&emsp;+--starry_final.ckpt.data-00000-of-00001
 
-|&emsp;+--haarcascade_eye.xml
+|&emsp;&emsp;+--haarcascade_eye.xml
 
 
 
