@@ -15,7 +15,7 @@
 > |              Finishing sunglasses wearing mode.              | 5/14/2018  | 5/15/2018 |
 > |      Refining my documents and improving the stability.      | 5/13/2018  |    ...    |
 > |                    __Development SumUp__                     | 5/10/2018  | 5/15/2018 |
-> |      __Substitude 'grabCut' for 'formula_evaluation'__       |  6/6/2018  | 6/6/2018  |
+> |    Substitude '__grabCut__' for '__formula_evaluation__'     |  6/6/2018  | 6/6/2018  |
 > |                           AR mode                            |  6/7/2018  | 6/7/2018  |
 
 
@@ -112,9 +112,9 @@ video mode setting: {
 
 ![overall](./images/overall.gif)
 
-- ### Display mode:
+- ### ![#f03c15](https://placehold.it/15/12EF21/000000?text=+)Display mode:
 
-  __Algorithms__: Nothing is worth mention.
+  __Algorithms__: Nothing is worth mention. Idea is from [Adrian Rosebrock's blog](https://www.pyimagesearch.com/2015/09/14/ball-tracking-with-opencv/) 
 
   ![Drawing_in_the_air](./images/display.gif)
 
@@ -148,6 +148,8 @@ video mode setting: {
 - ### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+)Figure Extraction:
 
   ​	__Algorithm__: [grabCut](http://www.cad.zju.edu.cn/home/gfzhang/course/computational-photography/proj1-grabcut/grabcut.html).
+
+  ​	__Extension__: [Mask-RCNN](https://github.com/matterport/Mask_RCNN)
 
   ![grabCut](./images/grabCut.gif)
 
