@@ -112,7 +112,7 @@ video mode setting: {
 
 ![overall](./images/overall.gif)
 
-- ### ![#f03c15](https://placehold.it/15/12EF21/000000?text=+)Display mode:
+- ### ![#12EF21](https://placehold.it/15/12EF21/000000?text=+)Display mode:
 
   __Algorithms__: Nothing is worth mention. Idea is from [Adrian Rosebrock's blog](https://www.pyimagesearch.com/2015/09/14/ball-tracking-with-opencv/) 
 
@@ -134,7 +134,7 @@ video mode setting: {
 
    ![Only_clothes_stylized](./images/Stylization.gif)
 
-- ### ~~Simple Formula Evaluation(Removed):~~
+- ### ~~![#123321](https://placehold.it/15/123321/000000?text=+)Simple Formula Evaluation(Removed):~~
 
   ​	~~Concerning my laptop thinkpad-t450 with i5-5200U and Geforce 940m... I used Lenet. to recognize each single character(coz this is only a very **simple** formula evaluation, I only took some basic operations into account.)~~
 
