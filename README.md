@@ -65,7 +65,9 @@ video mode setting: {
 
 - ### ![#f03c15](https://placehold.it/15/f03c15/000000?text=+)StyleTransfer mode:
 
-  Stylize image: Yes..., it's \<\<The Starry Night\>\> again(@...@)! Here she comes:![The_Starry_Night](./images/theStarryNight_big.jpg).
+  Stylize image: Yes..., it's \<\<The Starry Night\>\> again(@...@)! Here she comes:![The_Starry_Night](./images/theStarryNight_big.jpg)
+
+  __Algorithm__: [Clarification by the team of my roommates](https://github.com/yanzhengbin/Neural_Style_Transform)
 
 1. #### Whole input is stylized except my body:
 
