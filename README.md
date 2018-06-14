@@ -37,7 +37,7 @@
 
 +--.vscode
 
-|      +--settings.json
+|&emsp;+--settings.json
 
 +--main.py
 
@@ -45,111 +45,111 @@
 
 +--samples
 
-|      +--pikachu.jpg
+|&emsp;+--pikachu.jpg
 
-|      +--have_pikachu.py
+|&emsp;+--have_pikachu.py
 
-|      +--vtest.avi
+|&emsp;+--vtest.avi
 
-|      +--pikachu_0.jpg
+|&emsp;+--pikachu_0.jpg
 
-|      +--pedestrian_detection.py
+|&emsp;+--pedestrian_detection.py
 
 +--config.py
 
 +--modes
 
-|      +--video_mode.py
+|&emsp;+--video_mode.py
 
-|      +--display_mode
+|&emsp;+--display_mode
 
-|      |      +--menu_top.py
+|&emsp;|&emsp;+--menu_top.py
 
-|      |      +--ball_tracking.py
+|&emsp;|&emsp;+--ball_tracking.py
 
-|      +--AR_mode
+|&emsp;+--AR_mode
 
-|      |      +--plane_ar.py
+|&emsp;|&emsp;+--plane_ar.py
 
-|      |      +--common.py
+|&emsp;|&emsp;+--common.py
 
-|      |      +--video.py
+|&emsp;|&emsp;+--video.py
 
-|      |      +--plane_tracker.py
+|&emsp;|&emsp;+--plane_tracker.py
 
-|      |      +--tst_scene_render.py
+|&emsp;|&emsp;+--tst_scene_render.py
 
-|      +--styleTransfer_mode
+|&emsp;+--styleTransfer_mode
 
-|      |      +--style_transfer.py
+|&emsp;|&emsp;+--style_transfer.py
 
-|      |      +--stylize_img.py
+|&emsp;|&emsp;+--stylize_img.py
 
-|      |      +--im_transf_net.py
+|&emsp;|&emsp;+--im_transf_net.py
 
-|      +--grabCut_mode
+|&emsp;+--grabCut_mode
 
-|      |      +--cut_grab.py
+|&emsp;|&emsp;+--cut_grab.py
 
-|      +--glass_mode
+|&emsp;+--glass_mode
 
-|      |      +--wear_glasses.py
+|&emsp;|&emsp;+--wear_glasses.py
 
 +--show_tree_structure.py
 
 +--paper_references
 
-|      +--Guo_Background_Subtraction_Using_CVPR_2016_paper.pdf
+|&emsp;+--Guo_Background_Subtraction_Using_CVPR_2016_paper.pdf
 
 +--images
 
-|      +--grabCut_sample.png
+|&emsp;+--grabCut_sample.png
 
-|      +--Only_stylize_clothes.png
+|&emsp;+--Only_stylize_clothes.png
 
-|      +--project_structure.txt
+|&emsp;+--project_structure.txt
 
-|      +--Only_clothes_stylized.png
+|&emsp;+--Only_clothes_stylized.png
 
-|      +--outline.svg
+|&emsp;+--outline.svg
 
-|      +--AR.gif
+|&emsp;+--AR.gif
 
-|      +--grabCut.gif
+|&emsp;+--grabCut.gif
 
-|      +--display.gif
+|&emsp;+--display.gif
 
-|      +--scissors.jpg
+|&emsp;+--scissors.jpg
 
-|      +--minus_icon.png
+|&emsp;+--minus_icon.png
 
-|      +--oasis
+|&emsp;+--oasis
 
-|      +--glass_mode.gif
+|&emsp;+--glass_mode.gif
 
-|      +--glass_image.jpg
+|&emsp;+--glass_image.jpg
 
-|      +--plus_icon.png
+|&emsp;+--plus_icon.png
 
-|      +--Background_and_clothes_stylized.png
+|&emsp;+--Background_and_clothes_stylized.png
 
-|      +--theStarryNight.jpg
+|&emsp;+--theStarryNight.jpg
 
-|      +--glass.jpg
+|&emsp;+--glass.jpg
 
-|      +--overall.gif
+|&emsp;+--overall.gif
 
-|      +--Stylization.gif
+|&emsp;+--Stylization.gif
 
 +--README.md
 
 +--models
 
-|      +--starry_final.ckpt.index
+|&emsp;+--starry_final.ckpt.index
 
-|      +--starry_final.ckpt.data-00000-of-00001
+|&emsp;+--starry_final.ckpt.data-00000-of-00001
 
-|      +--haarcascade_eye.xml
+|&emsp;+--haarcascade_eye.xml
 
 
 
