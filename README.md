@@ -120,4 +120,4 @@ video mode setting: {
 
 + ![#a100a1](https://placehold.it/15/6666ab/000000?text=+)Use [Openpose](https://github.com/CMU-Perceptual-Computing-Lab/openpose) to estimate my poseture, especially the hands.
 + ![#a100a1](https://placehold.it/15/890011/000000?text=+)Modify the roof in AR mode into a more general object, such as an image or a video.
-+ ![#FF0000](https://placehold.it/15/FF0000/000000?text=+)Yet, __above all__, get a fairly good computer with a camera. ![bow_to_the_RMB](./images/bow_to_people_with_RMB.jpg)
++ ![#FF0000](https://placehold.it/15/FF0000/000000?text=+)Yet, __above all__, get a fairly good computer with a camera. ![bow_to_the_RMB](./images/bow_to_eshili.jpg)
