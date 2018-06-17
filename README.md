@@ -59,13 +59,15 @@ video mode setting: {
 
 - ### ![#12EF21](https://placehold.it/15/12EF21/000000?text=+)Display mode:
 
-  __Algorithms__: Nothing is worth mention. Idea is from [Adrian Rosebrock's blog](https://www.pyimagesearch.com/2015/09/14/ball-tracking-with-opencv/) 
+  __Algorithms__: Nothing is worth mention. I hoped to use hands as the controllers so that I can use the gestures to do many things. However, my little thinkpad with a Geforce 940m GPU doesn't approve of my suggestion..., and I bumped into the final controller idea in [Adrian Rosebrock's blog](https://www.pyimagesearch.com/2015/09/14/ball-tracking-with-opencv/).
 
   ![Drawing_in_the_air](./images/display.gif)
 
 - ### ![#f03c15](https://placehold.it/15/f03c15/000000?text=+)StyleTransfer mode:
 
-  Stylize image: Yes..., it's \<\<The Starry Night\>\> again(@...@)! Here she comes:![The_Starry_Night](./images/theStarryNight_big.jpg)
+  Stylize image: Yes..., it's \<\<The Starry Night\>\> again(@...@)! Here she comes:
+
+  ![The_Starry_Night](./images/theStarryNight_big.jpg)
 
   __Algorithm__: [Clarification by the team of my roommates](https://github.com/yanzhengbin/Neural_Style_Transform)
 
@@ -113,3 +115,9 @@ video mode setting: {
   __Algorithms:__ [3d_calibration](https://docs.opencv.org/2.4/modules/calib3d/doc/camera_calibration_and_3d_reconstruction.html#solvepnp).
 
   ![AR](./images/AR.gif)
+
+# TODO:
+
++ ![#a100a1](https://placehold.it/15/6666ab/000000?text=+)Use [Openpose](https://github.com/CMU-Perceptual-Computing-Lab/openpose) to estimate my poseture, especially the hands.
++ ![#a100a1](https://placehold.it/15/890011/000000?text=+)Modify the roof in AR mode into a more general object, such as an image or a video.
++ ![#FF0000](https://placehold.it/15/FF0000/000000?text=+)Yet, __above all__, get a fairly good computer with a camera. ![bow_to_the_RMB](./images/bow_to_people_with_RMB.jpg)

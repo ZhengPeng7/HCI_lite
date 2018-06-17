@@ -12,7 +12,7 @@ import sys
 if len(sys.argv) > 1:
     MODE = sys.argv[-1]
 
-# scene settings
+# # scene settings
 # cv2.namedWindow('Amuse_park')
 # cv2.moveWindow('Amuse_park', 300, 20)
 
