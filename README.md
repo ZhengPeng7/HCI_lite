@@ -7,16 +7,16 @@
 >
 > |                           Progress                           | Start Date | Deadline  |
 > | :----------------------------------------------------------: | :--------: | :-------: |
-> | [Building basic video flow frame skeleton, including controller tracking, controller tailing...](#display) |  5/9/2018  | 5/9/2018  |
-> |                     Appending top menu.                      | 5/10/2018  | 5/10/2018 |
-> |        Inserting real time image_style_transfer mode.        | 5/10/2018  | 5/11/2018 |
-> |  Implementing clothes region extraction for styleTransfer.   | 5/11/2018  | 5/12/2018 |
+> | [Building basic video flow frame skeleton, including controller tracking, controller tailing...](#![#12EF21](https://placehold.it/15/12EF21/000000?text=+)Display mode:) |  5/9/2018  | 5/9/2018  |
+> | [Appending top menu.](#![#12EF21](https://placehold.it/15/12EF21/000000?text=+)Display mode:) | 5/10/2018  | 5/10/2018 |
+> | [Inserting real time image_style_transfer mode.](![##f03c15](https://placehold.it/15/f03c15/000000?text=+)StyleTransfer mode:) | 5/10/2018  | 5/11/2018 |
+> | [Implementing clothes region extraction for styleTransfer.](#![#f03c15](https://placehold.it/15/f03c15/000000?text=+)StyleTransfer mode:) | 5/11/2018  | 5/12/2018 |
 > | Implementing formula evaluation: integerate my own dataset for training Lenet to do single character recognition, split the handwritten expression, then evaluate it. | 5/13/2018  | 5/14/2018 |
-> |              Finishing sunglasses wearing mode.              | 5/14/2018  | 5/15/2018 |
+> | [Finishing sunglasses wearing mode.](#![#c5f015](https://placehold.it/15/c5f015/000000?text=+)Glass mode:) | 5/14/2018  | 5/15/2018 |
 > |      Refining my documents and improving the stability.      | 5/13/2018  |    ...    |
 > |                    __Development SumUp__                     | 5/10/2018  | 5/15/2018 |
-> |    Substitude '__grabCut__' for '__formula_evaluation__'     |  6/6/2018  | 6/6/2018  |
-> |                           AR mode                            |  6/7/2018  | 6/7/2018  |
+> | [Substitude '__grabCut__' for '__formula_evaluation__'](#![#1589F0](https://placehold.it/15/1589F0/000000?text=+)Figure Extraction:) |  6/6/2018  | 6/6/2018  |
+> | [AR mode](#![#a100a1](https://placehold.it/15/a100a1/000000?text=+)AR of building roof on a plane) |  6/7/2018  | 6/7/2018  |
 
 
 
@@ -57,13 +57,11 @@ video mode setting: {
 
 ![overall](./images/overall.gif)
 
-- ### ![#12EF21](https://placehold.it/15/12EF21/000000?text=+)<span id="display">Display mode</span>:
-
-  <span id="1">anc</span>
+- ### ![#12EF21](https://placehold.it/15/12EF21/000000?text=+)Display mode:
 
   __Algorithms__: Nothing is worth mention. I hoped to use hands as the controllers so that I can use the gestures to do many things. However, my little thinkpad with a Geforce 940m GPU doesn't approve of my suggestion..., and I bumped into the final controller idea in [Adrian Rosebrock's blog](https://www.pyimagesearch.com/2015/09/14/ball-tracking-with-opencv/).
 
-  ![Drawing_in_the_air](./images/display.gif)
+  ![Drawing_in_the_air](./images/display.gif "abc")
 
 - ### ![#f03c15](https://placehold.it/15/f03c15/000000?text=+)StyleTransfer mode:
 
