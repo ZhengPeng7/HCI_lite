@@ -7,7 +7,7 @@
 >
 > |                           Progress                           | Start Date | Deadline  |
 > | :----------------------------------------------------------: | :--------: | :-------: |
-> | Building basic video flow frame skeleton, including controller tracking, controller tailing... |  5/9/2018  | 5/9/2018  |
+> | [Building basic video flow frame skeleton, including controller tracking, controller tailing...](#display) |  5/9/2018  | 5/9/2018  |
 > |                     Appending top menu.                      | 5/10/2018  | 5/10/2018 |
 > |        Inserting real time image_style_transfer mode.        | 5/10/2018  | 5/11/2018 |
 > |  Implementing clothes region extraction for styleTransfer.   | 5/11/2018  | 5/12/2018 |
@@ -57,7 +57,9 @@ video mode setting: {
 
 ![overall](./images/overall.gif)
 
-- ### ![#12EF21](https://placehold.it/15/12EF21/000000?text=+)Display mode:
+- ### ![#12EF21](https://placehold.it/15/12EF21/000000?text=+)<span id="display">Display mode</span>:
+
+  <span id="1">anc</span>
 
   __Algorithms__: Nothing is worth mention. I hoped to use hands as the controllers so that I can use the gestures to do many things. However, my little thinkpad with a Geforce 940m GPU doesn't approve of my suggestion..., and I bumped into the final controller idea in [Adrian Rosebrock's blog](https://www.pyimagesearch.com/2015/09/14/ball-tracking-with-opencv/).
 
