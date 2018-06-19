@@ -252,6 +252,7 @@
          x="228.36107"
          y="-49.822495"
          style="fill:#ffffff;fill-opacity:1;stroke-width:0.26458332">frame_fg</tspan></text>
+    <a xlink:href="https://github.com/ZhengPeng7/HCI_lite#display-mode">
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:11.28888893px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
@@ -262,7 +263,8 @@
          id="tspan1268"
          x="10.356544"
          y="13.51786"
-         style="stroke-width:0.26458332">·display</tspan></text>
+         style="stroke-width:0.26458332">·display</tspan></text></a>
+    <a xlink:href="https://github.com/ZhengPeng7/HCI_lite#styletransfer-mode">
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:11.28888893px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
@@ -273,7 +275,8 @@
          id="tspan1272"
          x="11.490469"
          y="28.258934"
-         style="stroke-width:0.26458332">·styleTransfer</tspan></text>
+         style="stroke-width:0.26458332">·styleTransfer</tspan></text></a>
+    <a xlink:href="https://github.com/ZhengPeng7/HCI_lite#figure-extraction">
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:11.28888893px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
@@ -284,7 +287,8 @@
          id="tspan1276"
          x="11.868444"
          y="44.511913"
-         style="stroke-width:0.26458332">·grabCut</tspan></text>
+         style="stroke-width:0.26458332">·grabCut</tspan></text></a>
+    <a xlink:href="https://github.com/ZhengPeng7/HCI_lite#glass-mode">
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:11.28888893px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
@@ -295,7 +299,8 @@
          x="12.054659"
          y="59.664673"
          style="stroke-width:0.26458332"
-         id="tspan1284">·glass</tspan></text>
+         id="tspan1284">·glass</tspan></text></a>
+    <a xlink:href="">
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:21.85540962px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.22766051"
@@ -1181,6 +1186,7 @@
          x="1.6604314"
          y="277.47629"
          style="font-size:7.05555534px;stroke-width:0.26458332">more codes should be typed in this way.</tspan></text>
+    <a xlink:href="https://github.com/ZhengPeng7/HCI_lite#ar-of-building-roof-on-a-plane">
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:11.28888893px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
@@ -1191,6 +1197,6 @@
          id="tspan1276-5"
          x="11.787276"
          y="76.259178"
-         style="stroke-width:0.26458332">·AR</tspan></text>
+         style="stroke-width:0.26458332">·AR</tspan></text></a>
   </g>
 </svg>
