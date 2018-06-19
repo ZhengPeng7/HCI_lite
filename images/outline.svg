@@ -42,7 +42,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.25"
-     inkscape:cx="1530.3681"
+     inkscape:cx="1050.3681"
      inkscape:cy="609.23885"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
@@ -252,66 +252,81 @@
          x="228.36107"
          y="-49.822495"
          style="fill:#ffffff;fill-opacity:1;stroke-width:0.26458332">frame_fg</tspan></text>
-    <a xlink:href="https://github.com/ZhengPeng7/HCI_lite#display-mode">
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:11.28888893px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="10.356544"
-       y="13.51786"
-       id="text1270"><tspan
-         sodipodi:role="line"
-         id="tspan1268"
+    <a
+       xlink:href="https://github.com/ZhengPeng7/HCI_lite#display-mode"
+       id="a50">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:11.28888893px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
          x="10.356544"
          y="13.51786"
-         style="stroke-width:0.26458332">·display</tspan></text></a>
-    <a xlink:href="https://github.com/ZhengPeng7/HCI_lite#styletransfer-mode">
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:11.28888893px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="11.490469"
-       y="28.258934"
-       id="text1274"><tspan
-         sodipodi:role="line"
-         id="tspan1272"
+         id="text1270"><tspan
+           sodipodi:role="line"
+           id="tspan1268"
+           x="10.356544"
+           y="13.51786"
+           style="stroke-width:0.26458332">·display</tspan></text>
+    </a>
+    <a
+       xlink:href="https://github.com/ZhengPeng7/HCI_lite#styletransfer-mode"
+       id="a54">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:11.28888893px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
          x="11.490469"
          y="28.258934"
-         style="stroke-width:0.26458332">·styleTransfer</tspan></text></a>
-    <a xlink:href="https://github.com/ZhengPeng7/HCI_lite#figure-extraction">
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:11.28888893px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="11.868444"
-       y="44.511913"
-       id="text1278"><tspan
-         sodipodi:role="line"
-         id="tspan1276"
+         id="text1274"><tspan
+           sodipodi:role="line"
+           id="tspan1272"
+           x="11.490469"
+           y="28.258934"
+           style="stroke-width:0.26458332">·styleTransfer</tspan></text>
+    </a>
+    <a
+       xlink:href="https://github.com/ZhengPeng7/HCI_lite#figure-extraction"
+       id="a58">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:11.28888893px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
          x="11.868444"
          y="44.511913"
-         style="stroke-width:0.26458332">·grabCut</tspan></text></a>
-    <a xlink:href="https://github.com/ZhengPeng7/HCI_lite#glass-mode">
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:11.28888893px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="12.054659"
-       y="59.664673"
-       id="text1282"><tspan
-         sodipodi:role="line"
+         id="text1278"><tspan
+           sodipodi:role="line"
+           id="tspan1276"
+           x="11.868444"
+           y="44.511913"
+           style="stroke-width:0.26458332">·grabCut</tspan></text>
+    </a>
+    <a
+       xlink:href="https://github.com/ZhengPeng7/HCI_lite#glass-mode"
+       id="a62">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:11.28888893px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
          x="12.054659"
          y="59.664673"
-         style="stroke-width:0.26458332"
-         id="tspan1284">·glass</tspan></text></a>
-    <a xlink:href="https://github.com/ZhengPeng7/HCI_lite#ar-of-building-roof-on-a-plane">
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:11.28888893px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="11.787276"
-       y="76.259178"
-       id="text1278-7"><tspan
-         sodipodi:role="line"
-         id="tspan1276-5"
+         id="text1282"><tspan
+           sodipodi:role="line"
+           x="12.054659"
+           y="59.664673"
+           style="stroke-width:0.26458332"
+           id="tspan1284">·glass</tspan></text>
+    </a>
+    <a
+       xlink:href="https://github.com/ZhengPeng7/HCI_lite#ar-of-building-roof-on-a-plane"
+       id="a66">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:11.28888893px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
          x="11.787276"
          y="76.259178"
-         style="stroke-width:0.26458332">·AR</tspan></text></a>
+         id="text1278-7"><tspan
+           sodipodi:role="line"
+           id="tspan1276-5"
+           x="11.787276"
+           y="76.259178"
+           style="stroke-width:0.26458332">·AR</tspan></text>
+    </a>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:21.85540962px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.22766051"
@@ -369,7 +384,7 @@
          id="tspan1246-3-7"
          x="245.63463"
          y="131.2733"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#e60a00;fill-opacity:1;stroke-width:0.20056516">frame_fg != (10, 08, 6)</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#e60a00;fill-opacity:1;stroke-width:0.20056516">frame_fg    &gt;   0</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.52315891px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 159.91513,-78.197167 c 0,0 0,0 8.85166,-3.524888 0,0 0.36883,0 -1.10645,-6.307737 v 0 c 0,0 0,0 -9.95813,4.081477 2.25902,5.79754 1.98242,5.890303 1.98242,5.890303 v 0 c 0.54644,2.05165 0.18697,10.3217 0.18697,10.3217 l -1.04319,10.232292"
@@ -573,18 +588,6 @@
        id="path1907-8-9-1-5-6-3"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cccccc" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:12.19840431px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.28590006"
-       x="244.60617"
-       y="-81.704636"
-       id="text1248-3-4-5"
-       transform="scale(0.91784456,1.0895091)"><tspan
-         sodipodi:role="line"
-         id="tspan1246-3-7-7"
-         x="244.60617"
-         y="-81.704636"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#e60a00;fill-opacity:1;stroke-width:0.28590006">(10, 08, 6)</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.45730445px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 162.93901,86.367398 c 0,0 0,0 7.49684,-3.18006 0,0 0.31238,0 -0.9371,-5.69067 v 0 c 0,0 0,0 -8.43396,3.6822 1.91326,5.23038 1.67899,5.31407 1.67899,5.31407 v 0 c 0.46282,1.85095 0.15836,9.31196 0.15836,9.31196 l -0.88352,9.231312"
