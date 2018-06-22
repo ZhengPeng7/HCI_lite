@@ -73,13 +73,13 @@ video mode setting: {
 
 1. #### Whole input is stylized except my body:
 
-   __Algorithms:__ [HSV Color Space](https://www.pyimagesearch.com/2014/08/18/skin-detection-step-step-example-using-python-opencv/), [Basic Morphology operations](https://docs.opencv.org/3.0-beta/doc/py_tutorials/py_imgproc/py_morphological_ops/py_morphological_ops.html), etc.
+   __Algorithms:__ [HSL Color Space](https://en.wikipedia.org/wiki/HSL_and_HSV#From_HSL), [Basic Morphology operations](https://docs.opencv.org/3.0-beta/doc/py_tutorials/py_imgproc/py_morphological_ops/py_morphological_ops.html), etc.
 
    ![Background_and_clothes_stylized](./images/Background_and_clothes_stylized.png)
 
 2. #### Only clothes stylized:
 
-   __Algorithms:__ [Background Substraction (LSBP)](http://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_video/py_bg_subtraction/py_bg_subtraction.html), [HSV Color Space](https://www.pyimagesearch.com/2014/08/18/skin-detection-step-step-example-using-python-opencv/)
+   __Algorithms:__ [Background Substraction (LSBP)](http://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_video/py_bg_subtraction/py_bg_subtraction.html), [HSL Color Space](https://en.wikipedia.org/wiki/HSL_and_HSV#From_HSL)
 
    ![Only_clothes_stylized](./images/Stylization.gif)
 

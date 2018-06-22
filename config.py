@@ -20,8 +20,8 @@ MODE = "display"
 args = {
     "video_source": 0,
     "deque_buffer": 16,
-    "orange_lower": (29, 86, 6),#(3, 103, 178),  # color range of ball in the HSV color space
-    "orange_upper": (64, 255, 255),#(234, 255, 255),
+    "green_lower": (19, 89, 64),   # color range of ball in the HLS color space
+    "green_upper": (69, 250, 255),
 }
 
 # menu_top settings

@@ -15,51 +15,52 @@ def ball_tracking(frame_bg_without_menu, frame_fg, args_display, MODE):
         args_display: Arguments needed in the tracking mode.
     """
     (dX, dY) = args_display["dXY"]
-    blurred = cv2.GaussianBlur(frame_bg_without_menu, (11, 11), 0)
-    hsv = cv2.cvtColor(frame_bg_without_menu, cv2.COLOR_BGR2HSV)
-    mask_color = cv2.inRange(hsv, args["orange_lower"], args["orange_upper"])
-    mask_color = cv2.erode(mask_color, None, iterations=2)
-    mask_color = cv2.dilate(mask_color, None, iterations=2)
+    hls = cv2.cvtColor(frame_bg_without_menu, cv2.COLOR_BGR2HLS)
+    mask_color = cv2.inRange(hls, args["green_lower"], args["green_upper"])
+    kernel_open = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (7, 7))
+    mask_color = cv2.morphologyEx(mask_color, cv2.MORPH_OPEN, kernel_open, iterations=5)
+    # cv2.imshow('', mask_color)
     cnts = cv2.findContours(
         mask_color.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE
     )[-2]
     center = None
     if len(cnts) > 0:
         c = max(cnts, key=cv2.contourArea)
-        ((x, y), radius) = cv2.minEnclosingCircle(c)
-        M = cv2.moments(c)
-        center = (int(M["m10"] / M["m00"]), int(M["m01"] / M["m00"]))
-        if radius > 10:
-            if args_display["is_start"] == 1:
-                args_display["drawing_color"] = tuple(
-                    [int(co) for co in np.random.randint(0, 256, (3,))]
-                )
-            # move into top menu
-            if center[1] < args_menu["icon_len_side"]:
-                if center[0] < args_menu["icon_len_side"] * 3:
-                    args_display["drawing_color"] = list(
-                        args_menu["menu_dict"].values()
-                    )[center[0] // args_menu["icon_len_side"]]
-                    args_display["is_start"] = 0
-                elif center[0] < args_menu["icon_len_side"] * 4:
-                    args_display["thick_coeff"] = min(17.0, args_display["thick_coeff"] * 1.03)
-                elif center[0] < args_menu["icon_len_side"] * 5:
-                    args_display["thick_coeff"] = max(1.7, args_display["thick_coeff"] / 1.03)
-                elif center[0] < args_menu["icon_len_side"] * 6:
-                    MODE = "grabCut"
-                    return frame_fg, args_display, MODE
-                elif center[0] < args_menu["icon_len_side"] * 7:
-                    MODE = 'styleTransfer'
-                    return frame_fg, args_display, MODE
-                elif center[0] < args_menu["icon_len_side"] * 8:
-                    MODE = 'glass'
-                    return frame_fg, args_display, MODE
-                else:
-                    pass
-            cv2.circle(frame_fg, (int(x), int(y)), int(radius),
-                tuple([int(co) for co in np.random.randint(0, 256, (3,))]), 2)     # args_menu["menu_dict"]["color_red"]
-            cv2.circle(frame_fg, center, 5, args_display["drawing_color"], -1)
-            args_display["pts"].appendleft(center)
+        if cv2.contourArea(c) > 666:
+            ((x, y), radius) = cv2.minEnclosingCircle(c)
+            M = cv2.moments(c)
+            center = (int(M["m10"] / M["m00"]), int(M["m01"] / M["m00"]))
+            if radius > 10:
+                if args_display["is_start"] == 1:
+                    args_display["drawing_color"] = tuple(
+                        [int(co) for co in np.random.randint(0, 256, (3,))]
+                    )
+                # move into top menu
+                if center[1] < args_menu["icon_len_side"]:
+                    if center[0] < args_menu["icon_len_side"] * 3:
+                        args_display["drawing_color"] = list(
+                            args_menu["menu_dict"].values()
+                        )[center[0] // args_menu["icon_len_side"]]
+                        args_display["is_start"] = 0
+                    elif center[0] < args_menu["icon_len_side"] * 4:
+                        args_display["thick_coeff"] = min(17.0, args_display["thick_coeff"] * 1.03)
+                    elif center[0] < args_menu["icon_len_side"] * 5:
+                        args_display["thick_coeff"] = max(1.7, args_display["thick_coeff"] / 1.03)
+                    elif center[0] < args_menu["icon_len_side"] * 6:
+                        MODE = "grabCut"
+                        return frame_fg, args_display, MODE
+                    elif center[0] < args_menu["icon_len_side"] * 7:
+                        MODE = 'styleTransfer'
+                        return frame_fg, args_display, MODE
+                    elif center[0] < args_menu["icon_len_side"] * 8:
+                        MODE = 'glass'
+                        return frame_fg, args_display, MODE
+                    else:
+                        pass
+                cv2.circle(frame_fg, (int(x), int(y)), int(radius),
+                    tuple([int(co) for co in np.random.randint(0, 256, (3,))]), 2)     # args_menu["menu_dict"]["color_red"]
+                cv2.circle(frame_fg, center, 5, args_display["drawing_color"], -1)
+                args_display["pts"].appendleft(center)
     for i in np.arange(1, len(args_display["pts"])):
         if args_display["pts"][i - 1] is None or args_display["pts"][i] is None:
             continue
