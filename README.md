@@ -1,4 +1,6 @@
 # HCI_lite
+![logo](./images/logo.svg)
+
 > __Description__: A lite human computer interaction system, mainly dependent on you 'handler' in your webcam.
 >
 > __Author__: Peng Zheng.
