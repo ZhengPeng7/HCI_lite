@@ -1,5 +1,3 @@
-+--.vscode
-|      +--settings.json
 +--main.py
 +--LICENSE
 +--samples
@@ -34,25 +32,11 @@
 +--images
 |      +--grabCut_sample.png
 |      +--Only_stylize_clothes.png
-|      +--project_structure.txt
-|      +--Only_clothes_stylized.png
 |      +--outline.svg
-|      +--AR.gif
-|      +--grabCut.gif
-|      +--display.gif
-|      +--scissors.jpg
-|      +--minus_icon.png
-|      +--oasis
-|      +--glass_mode.gif
-|      +--glass_image.jpg
-|      +--plus_icon.png
-|      +--Background_and_clothes_stylized.png
-|      +--theStarryNight.jpg
-|      +--glass.jpg
-|      +--overall.gif
-|      +--Stylization.gif
+|      ......
 +--README.md
 +--models
 |      +--starry_final.ckpt.index
 |      +--starry_final.ckpt.data-00000-of-00001
 |      +--haarcascade_eye.xml
+

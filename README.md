@@ -25,9 +25,7 @@
     OpenCV==4.0.0-pre	# With opencv-contrib
     numpy==1.14.3
     matplotlib==2.2.2
-    tensorflow-gpu==1.8.0    # CUDA=9, CUDNN=7.
-    scikit-learn==0.19.1
-    Keras==2.1.6
+    tensorflow-gpu==1.8.0    # CUDA=9, CUDNN=7
 
 
 ## Outline:
@@ -35,7 +33,7 @@
 
 # Project Structure:
 
-![project_structure](./images/project_structure.jpg)
+![project_structure](./images/project_structure_tree.png)
 
 
 
